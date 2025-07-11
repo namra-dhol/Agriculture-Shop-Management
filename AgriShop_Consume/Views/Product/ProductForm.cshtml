@@ -1,0 +1,51 @@
+﻿@model AgriShop_Consume.Models.ProductModel
+
+@{
+    ViewBag.Title = Model.ProductId == 0 ? "Add Product" : "Edit Product";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+<form asp-action="ProductAdd" method="post">
+    @Html.HiddenFor(m => m.ProductId)
+    @Html.HiddenFor(m => m.CreatedAt)
+
+    <div class="form-group">
+        <label>Product Name</label>
+        <input asp-for="ProductName" class="form-control" type="text" required />
+        @Html.ValidationMessageFor(m => m.ProductName, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        <label>Product Type</label>
+        @Html.DropDownListFor(m => m.ProductTypeId, Model.ProductTypeList, "-- Select Product Type --", new { @class = "form-control", required = "required" })
+        @Html.ValidationMessageFor(m => m.ProductTypeId, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        <label>Supplier</label>
+        @Html.DropDownListFor(m => m.SupplierId, Model.SupplierList, "-- Select Supplier --", new { @class = "form-control", required = "required" })
+        @Html.ValidationMessageFor(m => m.SupplierId, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        <label>Stock</label>
+        <input asp-for="Stock" class="form-control" type="number" min="0" required />
+        @Html.ValidationMessageFor(m => m.Stock, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        <label>Product Image URL</label>
+        <input asp-for="ProductImg" class="form-control" type="text" />
+    </div>
+
+    <div class="form-group">
+        <label>User</label>
+        @Html.DropDownListFor(m => m.UserId, Model.UserList, "-- Select User --", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.UserId, "", new { @class = "text-danger" })
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Save Product</button>
+</form>

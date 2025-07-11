@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\AgriShop_Consume.props" />
+</Project>

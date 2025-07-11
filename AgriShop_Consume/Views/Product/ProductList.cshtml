@@ -1,0 +1,48 @@
+﻿@model IEnumerable<AgriShop_Consume.Models.ProductModel>
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+
+
+<h2>Product List</h2>
+
+
+
+<a class="btn btn-primary mb-3" href="@Url.Action("ProductAdd", "Product")">Add Product</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Stock</th>
+            <th>TypeId</th>
+            <th>SupplierId</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ProductName</td>
+                <td>@item.Stock</td>
+                <td>@item.ProductTypeId</td>
+                <td>@item.SupplierId</td>
+                <td>
+                    <a class="btn btn-sm btn-info" href="@Url.Action("Edit", "Product", new { id = item.ProductId })">Edit</a>
+                    <a class="btn btn-danger btn-sm"
+                       href="@Url.Action("Delete", "Product", new { id = item.ProductId })"
+                       onclick="return confirm('Are you sure you want to delete this product?');">
+                        Delete
+                    </a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
