@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using AgriShop.Models;
+using FluentValidation;
 
 namespace AgriShop.Controllers
 {
@@ -9,10 +10,12 @@ namespace AgriShop.Controllers
     public class UserController : ControllerBase
     {
         private readonly AgriShopContext context;
+        private readonly IValidator<User> validator;
 
-        public UserController(AgriShopContext context)
+        public UserController(AgriShopContext context, IValidator<User> validator)
         {
             this.context = context;
+            this.validator = validator;
         }
 
         #region GetAllUsers
@@ -38,24 +41,49 @@ namespace AgriShop.Controllers
 
         #region InsertUser
         [HttpPost]
-        public IActionResult InsertUser(User user)
+        public async Task<IActionResult> InsertUser([FromBody] User user)
         {
-            user.Password = user.Password; // You can hash the password here if needed
-            context.Users.Add(user);
-            context.SaveChanges();
-
-            return CreatedAtAction(nameof(GetUserById), new { id = user.UserId }, user);
+            var validationResult = await validator.ValidateAsync(user);
+            if (!validationResult.IsValid)
+            {
+                return BadRequest(validationResult.Errors.Select(e => new
+                {
+                    Property = e.PropertyName,
+                    Error = e.ErrorMessage
+                }));
+            }
+            try
+            {
+                // You can hash the password here if needed
+                context.Users.Add(user);
+                await context.SaveChangesAsync();
+                return CreatedAtAction(nameof(GetUserById), new { id = user.UserId }, user);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"An error occurred while saving the user: {ex.Message}");
+            }
         }
         #endregion
 
         #region UpdateUserById
         [HttpPut("{id}")]
-        public IActionResult UpdateUser(int id, User user)
+        public async Task<IActionResult> UpdateUser(int id, [FromBody] User user)
         {
             if (id != user.UserId)
                 return BadRequest();
 
-            var existingUser = context.Users.Find(id);
+            var validationResult = await validator.ValidateAsync(user);
+            if (!validationResult.IsValid)
+            {
+                return BadRequest(validationResult.Errors.Select(e => new
+                {
+                    Property = e.PropertyName,
+                    Error = e.ErrorMessage
+                }));
+            }
+
+            var existingUser = await context.Users.FindAsync(id);
             if (existingUser == null)
                 return NotFound();
 
@@ -67,9 +95,16 @@ namespace AgriShop.Controllers
             existingUser.Phone = user.Phone;
             existingUser.Role = user.Role;
 
-            context.Users.Update(existingUser);
-            context.SaveChanges();
-            return NoContent();
+            try
+            {
+                context.Users.Update(existingUser);
+                await context.SaveChangesAsync();
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"An error occurred while updating the user: {ex.Message}");
+            }
         }
         #endregion
 

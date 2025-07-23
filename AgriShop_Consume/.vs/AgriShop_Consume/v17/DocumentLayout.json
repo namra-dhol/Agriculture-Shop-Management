@@ -3,28 +3,52 @@
   "WorkspaceRootPath": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{04E44F39-6630-443D-83B4-72BF3AAF306F}|AgriShop_Consume.csproj|d:\\agriculture-shop-management\\agrishop_consume\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04E44F39-6630-443D-83B4-72BF3AAF306F}|AgriShop_Consume.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{04E44F39-6630-443D-83B4-72BF3AAF306F}|AgriShop_Consume.csproj|d:\\agriculture-shop-management\\agrishop_consume\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{04E44F39-6630-443D-83B4-72BF3AAF306F}|AgriShop_Consume.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{04E44F39-6630-443D-83B4-72BF3AAF306F}|AgriShop_Consume.csproj|d:\\agriculture-shop-management\\agrishop_consume\\models\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04E44F39-6630-443D-83B4-72BF3AAF306F}|AgriShop_Consume.csproj|solutionrelative:models\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04E44F39-6630-443D-83B4-72BF3AAF306F}|AgriShop_Consume.csproj|d:\\agriculture-shop-management\\agrishop_consume\\views\\product\\productform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{04E44F39-6630-443D-83B4-72BF3AAF306F}|AgriShop_Consume.csproj|solutionrelative:views\\product\\productform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{04E44F39-6630-443D-83B4-72BF3AAF306F}|AgriShop_Consume.csproj|d:\\agriculture-shop-management\\agrishop_consume\\views\\user\\userlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{04E44F39-6630-443D-83B4-72BF3AAF306F}|AgriShop_Consume.csproj|solutionrelative:views\\user\\userlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{04E44F39-6630-443D-83B4-72BF3AAF306F}|AgriShop_Consume.csproj|d:\\agriculture-shop-management\\agrishop_consume\\views\\product\\productlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{04E44F39-6630-443D-83B4-72BF3AAF306F}|AgriShop_Consume.csproj|solutionrelative:views\\product\\productlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{04E44F39-6630-443D-83B4-72BF3AAF306F}|AgriShop_Consume.csproj|d:\\agriculture-shop-management\\agrishop_consume\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04E44F39-6630-443D-83B4-72BF3AAF306F}|AgriShop_Consume.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{04E44F39-6630-443D-83B4-72BF3AAF306F}|AgriShop_Consume.csproj|d:\\agriculture-shop-management\\agrishop_consume\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04E44F39-6630-443D-83B4-72BF3AAF306F}|AgriShop_Consume.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{04E44F39-6630-443D-83B4-72BF3AAF306F}|AgriShop_Consume.csproj|d:\\agriculture-shop-management\\agrishop_consume\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{04E44F39-6630-443D-83B4-72BF3AAF306F}|AgriShop_Consume.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{04E44F39-6630-443D-83B4-72BF3AAF306F}|AgriShop_Consume.csproj|d:\\agriculture-shop-management\\agrishop_consume\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{04E44F39-6630-443D-83B4-72BF3AAF306F}|AgriShop_Consume.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04E44F39-6630-443D-83B4-72BF3AAF306F}|AgriShop_Consume.csproj|d:\\agriculture-shop-management\\agrishop_consume\\views\\product\\productform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{04E44F39-6630-443D-83B4-72BF3AAF306F}|AgriShop_Consume.csproj|solutionrelative:views\\product\\productform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04E44F39-6630-443D-83B4-72BF3AAF306F}|AgriShop_Consume.csproj|d:\\agriculture-shop-management\\agrishop_consume\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04E44F39-6630-443D-83B4-72BF3AAF306F}|AgriShop_Consume.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04E44F39-6630-443D-83B4-72BF3AAF306F}|AgriShop_Consume.csproj|d:\\agriculture-shop-management\\agrishop_consume\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04E44F39-6630-443D-83B4-72BF3AAF306F}|AgriShop_Consume.csproj|solutionrelative:models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04E44F39-6630-443D-83B4-72BF3AAF306F}|AgriShop_Consume.csproj|d:\\agriculture-shop-management\\agrishop_consume\\models\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04E44F39-6630-443D-83B4-72BF3AAF306F}|AgriShop_Consume.csproj|solutionrelative:models\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04E44F39-6630-443D-83B4-72BF3AAF306F}|AgriShop_Consume.csproj|d:\\agriculture-shop-management\\agrishop_consume\\views\\user\\addedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{04E44F39-6630-443D-83B4-72BF3AAF306F}|AgriShop_Consume.csproj|solutionrelative:views\\user\\addedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04E44F39-6630-443D-83B4-72BF3AAF306F}|AgriShop_Consume.csproj|d:\\agriculture-shop-management\\agrishop_consume\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04E44F39-6630-443D-83B4-72BF3AAF306F}|AgriShop_Consume.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04E44F39-6630-443D-83B4-72BF3AAF306F}|AgriShop_Consume.csproj|d:\\agriculture-shop-management\\agrishop_consume\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04E44F39-6630-443D-83B4-72BF3AAF306F}|AgriShop_Consume.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{04E44F39-6630-443D-83B4-72BF3AAF306F}|AgriShop_Consume.csproj|d:\\agriculture-shop-management\\agrishop_consume\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -38,11 +62,95 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAADIBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-22T03:11:13.753Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-18T02:52:06.982Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AddEdit.cshtml",
+              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\Views\\User\\AddEdit.cshtml",
+              "RelativeDocumentMoniker": "Views\\User\\AddEdit.cshtml",
+              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\Views\\User\\AddEdit.cshtml",
+              "RelativeToolTip": "Views\\User\\AddEdit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-18T02:49:29.981Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserList.cshtml",
+              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\Views\\User\\UserList.cshtml",
+              "RelativeDocumentMoniker": "Views\\User\\UserList.cshtml",
+              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\Views\\User\\UserList.cshtml",
+              "RelativeToolTip": "Views\\User\\UserList.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAcAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-16T05:44:46.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T05:16:37.466Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
+              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Controllers\\ProductController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T16:52:45.672Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserModel.cs",
+              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\Models\\UserModel.cs",
+              "RelativeDocumentMoniker": "Models\\UserModel.cs",
+              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\Models\\UserModel.cs",
+              "RelativeToolTip": "Models\\UserModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T05:15:10.749Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
@@ -54,19 +162,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAByAAAAAAAAAA==",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAAALYAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-10T16:59:33.929Z"
+              "WhenOpened": "2025-07-10T16:59:33.929Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -78,52 +187,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "ProductModel.cs",
               "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\Models\\ProductModel.cs",
               "RelativeDocumentMoniker": "Models\\ProductModel.cs",
               "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\Models\\ProductModel.cs",
               "RelativeToolTip": "Models\\ProductModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-10T16:55:07.166Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "ProductForm.cshtml",
               "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\Views\\Product\\ProductForm.cshtml",
               "RelativeDocumentMoniker": "Views\\Product\\ProductForm.cshtml",
               "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\Views\\Product\\ProductForm.cshtml",
               "RelativeToolTip": "Views\\Product\\ProductForm.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAACkAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-07-10T16:54:44.262Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "ProductList.cshtml",
               "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\Views\\Product\\ProductList.cshtml",
               "RelativeDocumentMoniker": "Views\\Product\\ProductList.cshtml",
               "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\Views\\Product\\ProductList.cshtml",
               "RelativeToolTip": "Views\\Product\\ProductList.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAEcAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-07-10T16:52:56.193Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
-              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "Controllers\\ProductController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAI4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T16:52:45.672Z",
-              "EditorCaption": ""
             }
           ]
         }

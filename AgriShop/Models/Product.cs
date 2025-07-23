@@ -13,7 +13,7 @@ public partial class Product
 
     public int ProductTypeId { get; set; }
 
-    public int SupplierId { get; set; }
+    public int SupplierId { get; set; }     
 
     public int? Stock { get; set; }
 

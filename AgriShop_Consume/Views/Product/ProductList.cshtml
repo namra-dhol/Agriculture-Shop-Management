@@ -1,48 +1,268 @@
 ﻿@model IEnumerable<AgriShop_Consume.Models.ProductModel>
-@if (TempData["Success"] != null)
-{
-    <div class="alert alert-success">@TempData["Success"]</div>
+
+@{
+    ViewData["Title"] = "Product Management";
 }
-@if (TempData["Error"] != null)
-{
-    <div class="alert alert-danger">@TempData["Error"]</div>
-}
-
-
-<h2>Product List</h2>
-
-
-
-<a class="btn btn-primary mb-3" href="@Url.Action("ProductAdd", "Product")">Add Product</a>
-
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Stock</th>
-            <th>TypeId</th>
-            <th>SupplierId</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>@item.ProductName</td>
-                <td>@item.Stock</td>
-                <td>@item.ProductTypeId</td>
-                <td>@item.SupplierId</td>
-                <td>
-                    <a class="btn btn-sm btn-info" href="@Url.Action("Edit", "Product", new { id = item.ProductId })">Edit</a>
-                    <a class="btn btn-danger btn-sm"
-                       href="@Url.Action("Delete", "Product", new { id = item.ProductId })"
-                       onclick="return confirm('Are you sure you want to delete this product?');">
-                        Delete
-                    </a>
-
-                </td>
-            </tr>
+@* 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />*@
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" /> 
+    <style>
+        :root {
+            --primary-color: #22c55e;
+            --secondary-color: #f8f9fa;
         }
-    </tbody>
-</table>
+
+        .bg-primary-custom {
+            background-color: var(--primary-color) !important;
+        }
+
+        .text-primary-custom {
+            color: var(--primary-color) !important;
+        }
+
+        .btn-primary-custom {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+        }
+
+            .btn-primary-custom:hover {
+                background-color: #16a34a;
+                border-color: #16a34a;
+            }
+
+        .product-card {
+            transition: all 0.3s ease;
+            border: none;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+            .product-card:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            }
+
+        .admin-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #16a34a 100%);
+            color: white;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .stock-badge {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+        }
+
+        .action-buttons .btn {
+            margin-right: 0.25rem;
+            margin-bottom: 0.25rem;
+        }
+    </style>
+@* </head> *@
+
+<body class="bg-light">
+    <main class="main">
+        <div class="container-fluid">
+
+            <!-- Admin Header -->
+            <div class="admin-header">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="h3 mb-0 fw-bold">🌾 AgriMart</div>
+                                <span class="badge bg-light text-dark">Admin Panel</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <!-- Alert Messages -->
+                @if (TempData["Success"] != null)
+                {
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <i class="bi bi-check-circle me-2"></i>@TempData["Success"]
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                }
+                @if (TempData["Error"] != null)
+                {
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <i class="bi bi-exclamation-triangle me-2"></i>@TempData["Error"]
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                }
+
+                <!-- Page Header & Add Button -->
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div>
+                        <h2 class="text-primary-custom fw-bold mb-1">Product Management</h2>
+                        <p class="text-muted mb-0">Manage your agricultural products inventory</p>
+                    </div>
+                    <a class="btn btn-primary-custom btn-lg px-4" href="@Url.Action("ProductAdd", "Product")">
+                        <i class="bi bi-plus-circle me-2"></i>Add New Product
+                    </a>
+                </div>
+
+                <!-- Product Grid View -->
+                <div class="row" id="cardView">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                            <div class="card product-card h-100">
+                                <div class="card-header bg-white border-bottom-0 pb-0">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <h6 class="card-title text-primary-custom fw-semibold mb-1">@item.ProductName</h6>
+                                        <div class="dropdown">
+                                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-label="Actions">
+                                                <i class="bi bi-three-dots"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a class="dropdown-item" href="@Url.Action("Edit", "Product", new { id = item.ProductId })">
+                                                        <i class="bi bi-pencil me-2"></i>Edit
+                                                    </a>
+                                                </li>
+                                                <li><hr class="dropdown-divider"></li>
+                                                <li>
+                                                    <a class="dropdown-item text-danger"
+                                                       href="@Url.Action("Delete", "Product", new { id = item.ProductId })"
+                                                       onclick="return confirm('Are you sure you want to delete this product?');">
+                                                        <i class="bi bi-trash me-2"></i>Delete
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-body">
+                                    <div class="row g-3">
+                                        <div class="col-12 d-flex justify-content-between align-items-center">
+                                            <span class="text-muted small">Stock Level</span>
+                                            @{
+                                                string badgeClass = item.Stock > 50 ? "bg-success" :
+                                                item.Stock > 20 ? "bg-warning" : "bg-danger";
+                                            }
+                                            <span class="badge @badgeClass stock-badge">@item.Stock units</span>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="text-center p-2 bg-light rounded">
+                                                <div class="text-muted small">Type ID</div>
+                                                <div class="fw-semibold text-primary-custom">@item.ProductTypeId</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="text-center p-2 bg-light rounded">
+                                                <div class="text-muted small">Supplier ID</div>
+                                                <div class="fw-semibold text-primary-custom">@item.SupplierId</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-footer bg-white border-top-0">
+                                    <div class="action-buttons d-flex gap-2">
+                                        <a class="btn btn-outline-primary btn-sm flex-fill" title="Edit" href="@Url.Action("Edit", "Product", new { id = item.ProductId })">
+                                            <i class="bi bi-pencil me-1"></i>Edit
+                                        </a>
+                                        <a class="btn btn-outline-danger btn-sm flex-fill" title="Delete"
+                                           href="@Url.Action("Delete", "Product", new { id = item.ProductId })"
+                                           onclick="return confirm('Are you sure you want to delete this product?');">
+                                            <i class="bi bi-trash me-1"></i>Delete
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+                <!-- Table View -->
+                <div class="card mt-4" style="display: none;" id="tableView">
+                    <div class="card-header bg-primary-custom text-white">
+                        <h5 class="mb-0"><i class="bi bi-table me-2"></i>Product List - Table View</h5>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Stock</th>
+                                        <th>Type ID</th>
+                                        <th>Supplier ID</th>
+                                        <th class="text-center">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@item.ProductName</td>
+                                            <td>
+                                                @{
+                                                    string badgeClass = item.Stock > 50 ? "bg-success" :
+                                                    item.Stock > 20 ? "bg-warning" : "bg-danger";
+                                                }
+                                                <span class="badge @badgeClass">@item.Stock</span>
+                                            </td>
+                                            <td>@item.ProductTypeId</td>
+                                            <td>@item.SupplierId</td>
+                                            <td class="text-center">
+                                                <div class="btn-group">
+                                                    <a class="btn btn-sm btn-outline-primary" href="@Url.Action("Edit", "Product", new { id = item.ProductId })" title="Edit"><i class="bi bi-pencil"></i></a>
+                                                    <a class="btn btn-sm btn-outline-danger" href="@Url.Action("Delete", "Product", new { id = item.ProductId })" title="Delete"
+                                                       onclick="return confirm('Are you sure you want to delete this product?');">
+                                                        <i class="bi bi-trash"></i>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle View Button -->
+                <div class="text-center mt-4">
+                    <button id="toggleViewBtn" class="btn btn-outline-secondary" onclick="toggleView()">
+                        <i class="bi bi-arrow-repeat me-2"></i>Switch to Table View
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let isCardView = true;
+
+        function toggleView() {
+            const cardView = document.getElementById('cardView');
+            const tableView = document.getElementById('tableView');
+            const toggleBtn = document.getElementById('toggleViewBtn');
+
+            isCardView = !isCardView;
+            cardView.style.display = isCardView ? 'flex' : 'none';
+            tableView.style.display = isCardView ? 'none' : 'block';
+            toggleBtn.innerHTML = isCardView
+                ? '<i class="bi bi-arrow-repeat me-2"></i>Switch to Table View'
+                : '<i class="bi bi-grid me-2"></i>Switch to Card View';
+        }
+    </script>
+</body>
+@* </html> *@

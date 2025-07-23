@@ -18,9 +18,19 @@ CREATE TABLE Supplier (
     Address NVARCHAR(200)
 );
 
+CREATE TABLE User(
+    UserID INT PRIMARY KEY IDENTITY(1,1),
+    Name NVARCHAR(100),
+    Email NVARCHAR(100),
+    password NVARCHAR(100),
+    Address NVARCHAR(200),
+    Phone NVARCHAR(20),
+    Role NVARCHAR(20) DEFAULT 'Customer'
+);
+
 CREATE TABLE Product (
     ProductID INT PRIMARY KEY IDENTITY(1,1),
-    Name NVARCHAR(100),
+    ProductName NVARCHAR(100),
     ProductTypeID INT NOT NULL,
     Unit NVARCHAR(20),
     Price DECIMAL(10,2),
@@ -36,6 +46,7 @@ CREATE TABLE Purchase (
     SupplierID INT NOT NULL,
     PurchaseDate DATETIME NOT NULL,
     TotalAmount DECIMAL(10,2),
+    FOREIGN KEY (UserID) REFERENCES User(UserID),
     FOREIGN KEY (SupplierID) REFERENCES Supplier(SupplierID)
 );
 
@@ -54,7 +65,7 @@ CREATE TABLE Sale (
     UserID NVARCHAR(450) NOT NULL,
     SaleDate DATETIME NOT NULL,
     TotalAmount DECIMAL(10,2),
-    FOREIGN KEY (UserID) REFERENCES AspNetUsers(Id)
+   FOREIGN KEY (UserID) REFERENCES User(UserID)
 );
 
 CREATE TABLE SaleItem (

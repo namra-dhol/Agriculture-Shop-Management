@@ -171,3 +171,5 @@ D:\Agriculture-Shop-Management\AgriShop\obj\Debug\net8.0\refint\AgriShop.dll
 D:\Agriculture-Shop-Management\AgriShop\obj\Debug\net8.0\AgriShop.pdb
 D:\Agriculture-Shop-Management\AgriShop\obj\Debug\net8.0\AgriShop.genruntimeconfig.cache
 D:\Agriculture-Shop-Management\AgriShop\obj\Debug\net8.0\ref\AgriShop.dll
+D:\Agriculture-Shop-Management\AgriShop\bin\Debug\net8.0\FluentValidation.dll
+D:\Agriculture-Shop-Management\AgriShop\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll

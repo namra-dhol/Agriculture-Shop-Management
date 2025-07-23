@@ -1,8 +1,319 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿<main id="main" class="main"> <!-- Hero Section -->
+<section class="hero-section py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="py-5">
+                    <span class="badge bg-primary-custom mb-3">🌾 India's #1 Agriculture Marketplace</span>
+                    <h1 class="display-4 fw-bold mb-4">
+                        Premium Agricultural Products for
+                        <span class="text-primary-custom">Modern Farmers</span>
+                    </h1>
+                    <p class="lead text-muted mb-4">
+                        Get quality seeds, fertilizers, tools, and expert advice delivered to your farm.
+                        Trusted by over 50,000 farmers across India.
+                    </p>
+                    <div class="d-flex flex-column flex-sm-row gap-3">
+                        <button class="btn bg-primary-custom text-white btn-lg px-4">
+                            Shop Now <i class="bi bi-chevron-right ms-2"></i>
+                        </button>
+                        <button class="btn btn-outline-primary btn-lg px-4">
+                            Download App
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 d-none d-lg-block">
+                <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=600&h=400"
+                     alt="Agriculture" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </div>
+</section>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!-- Features Section -->
+<section class="py-4 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-6 mb-3">
+                <div class="d-flex align-items-center gap-3 p-3">
+                    <i class="bi bi-truck feature-icon"></i>
+                    <div>
+                        <h6 class="mb-1 fw-semibold">Free Delivery</h6>
+                        <small class="text-muted">Orders above ₹999</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+                <div class="d-flex align-items-center gap-3 p-3">
+                    <i class="bi bi-shield-check feature-icon"></i>
+                    <div>
+                        <h6 class="mb-1 fw-semibold">Quality Assured</h6>
+                        <small class="text-muted">100% Genuine Products</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+                <div class="d-flex align-items-center gap-3 p-3">
+                    <i class="bi bi-headset feature-icon"></i>
+                    <div>
+                        <h6 class="mb-1 fw-semibold">Expert Support</h6>
+                        <small class="text-muted">24/7 Agriculture Advice</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+                <div class="d-flex align-items-center gap-3 p-3">
+                    <i class="bi bi-award feature-icon"></i>
+                    <div>
+                        <h6 class="mb-1 fw-semibold">Trusted Brand</h6>
+                        <small class="text-muted">5+ Years in Business</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Categories Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold mb-3">Shop by Category</h2>
+            <p class="text-muted">Find everything you need for your farm in one place</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-2 col-md-4 col-6 mb-4">
+                <div class="card category-card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400"
+                             alt="Seeds" class="rounded-circle mb-3" width="64" height="64" style="object-fit: cover;">
+                        <h6 class="fw-semibold">Seeds & Saplings</h6>
+                        <small class="text-muted">250 Products</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 mb-4">
+                <div class="card category-card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=400"
+                             alt="Fertilizers" class="rounded-circle mb-3" width="64" height="64" style="object-fit: cover;">
+                        <h6 class="fw-semibold">Fertilizers</h6>
+                        <small class="text-muted">180 Products</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 mb-4">
+                <div class="card category-card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=400"
+                             alt="Tools" class="rounded-circle mb-3" width="64" height="64" style="object-fit: cover;">
+                        <h6 class="fw-semibold">Farm Tools</h6>
+                        <small class="text-muted">320 Products</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 mb-4">
+                <div class="card category-card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <img src="https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?w=400"
+                             alt="Pesticides" class="rounded-circle mb-3" width="64" height="64" style="object-fit: cover;">
+                        <h6 class="fw-semibold">Pesticides</h6>
+                        <small class="text-muted">140 Products</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 mb-4">
+                <div class="card category-card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?w=400"
+                             alt="Irrigation" class="rounded-circle mb-3" width="64" height="64" style="object-fit: cover;">
+                        <h6 class="fw-semibold">Irrigation</h6>
+                        <small class="text-muted">95 Products</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 mb-4">
+                <div class="card category-card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <img src="https://images.unsplash.com/photo-1416226118902-e91edb9b9479?w=400"
+                             alt="Garden Care" class="rounded-circle mb-3" width="64" height="64" style="object-fit: cover;">
+                        <h6 class="fw-semibold">Garden Care</h6>
+                        <small class="text-muted">220 Products</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Products -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-5">
+            <div>
+                <h2 class="display-5 fw-bold mb-3">Featured Products</h2>
+                <p class="text-muted">Best selling products chosen by farmers</p>
+            </div>
+            <button class="btn btn-outline-primary">
+                View All Products <i class="bi bi-chevron-right ms-2"></i>
+            </button>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card product-card h-100 border-0 shadow-sm">
+                    <div class="position-relative">
+                        <img src="https://images.unsplash.com/photo-1592841200221-21e1c9d5fb52?w=400"
+                             class="card-img-top" alt="Tomato Seeds" style="height: 200px; object-fit: cover;">
+                        <span class="badge bg-danger position-absolute top-0 start-0 m-2">25% OFF</span>
+                        <button class="btn btn-light position-absolute top-0 end-0 m-2 rounded-circle">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-title">Premium Hybrid Tomato Seeds - High Yield Variety</h6>
+                        <div class="d-flex align-items-center mb-2">
+                            <div class="star-rating me-2">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star"></i>
+                            </div>
+                            <small class="text-muted">(156)</small>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <span class="h5 text-primary-custom mb-0">₹299</span>
+                            <span class="text-muted text-decoration-line-through">₹399</span>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                        <button class="btn bg-primary-custom text-white w-100">
+                            <i class="bi bi-cart me-2"></i>Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card product-card h-100 border-0 shadow-sm">
+                    <div class="position-relative">
+                        <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=400"
+                             class="card-img-top" alt="NPK Fertilizer" style="height: 200px; object-fit: cover;">
+                        <span class="badge bg-danger position-absolute top-0 start-0 m-2">19% OFF</span>
+                        <button class="btn btn-light position-absolute top-0 end-0 m-2 rounded-circle">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-title">Organic NPK Fertilizer - 50kg Bag</h6>
+                        <div class="d-flex align-items-center mb-2">
+                            <div class="star-rating me-2">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <small class="text-muted">(89)</small>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <span class="h5 text-primary-custom mb-0">₹1299</span>
+                            <span class="text-muted text-decoration-line-through">₹1599</span>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                        <button class="btn bg-primary-custom text-white w-100">
+                            <i class="bi bi-cart me-2"></i>Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card product-card h-100 border-0 shadow-sm">
+                    <div class="position-relative">
+                        <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=400"
+                             class="card-img-top" alt="Garden Spade" style="height: 200px; object-fit: cover;">
+                        <button class="btn btn-light position-absolute top-0 end-0 m-2 rounded-circle">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                        <div class="position-absolute inset-0 bg-dark bg-opacity-50 d-flex align-items-center justify-content-center" style="top: 0; left: 0; right: 0; bottom: 0;">
+                            <span class="text-white fw-medium">Out of Stock</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-title">Heavy Duty Garden Spade - Stainless Steel</h6>
+                        <div class="d-flex align-items-center mb-2">
+                            <div class="star-rating me-2">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star"></i>
+                            </div>
+                            <small class="text-muted">(234)</small>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <span class="h5 text-primary-custom mb-0">₹899</span>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                        <button class="btn btn-secondary w-100" disabled>
+                            <i class="bi bi-cart me-2"></i>Out of Stock
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card product-card h-100 border-0 shadow-sm">
+                    <div class="position-relative">
+                        <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?w=400"
+                             class="card-img-top" alt="Irrigation Kit" style="height: 200px; object-fit: cover;">
+                        <span class="badge bg-danger position-absolute top-0 start-0 m-2">17% OFF</span>
+                        <button class="btn btn-light position-absolute top-0 end-0 m-2 rounded-circle">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-title">Automatic Drip Irrigation Kit - 100 Plants</h6>
+                        <div class="d-flex align-items-center mb-2">
+                            <div class="star-rating me-2">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <small class="text-muted">(67)</small>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <span class="h5 text-primary-custom mb-0">₹2499</span>
+                            <span class="text-muted text-decoration-line-through">₹2999</span>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                        <button class="btn bg-primary-custom text-white w-100">
+                            <i class="bi bi-cart me-2"></i>Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="py-5 bg-primary-custom text-white">
+    <div class="container text-center">
+        <h2 class="display-5 fw-bold mb-4">Stay Updated with AgriMart</h2>
+        <p class="lead mb-4">Get farming tips, product updates, and exclusive offers delivered to your inbox</p>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="input-group">
+                    <input type="email" class="form-control" placeholder="Enter your email">
+                    <button class="btn btn-light text-dark fw-medium">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</main>  

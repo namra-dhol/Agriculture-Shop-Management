@@ -33,3 +33,6 @@ D:\Agriculture-Shop-Management\AgriShop_Consume\obj\Debug\net8.0\refint\AgriShop
 D:\Agriculture-Shop-Management\AgriShop_Consume\obj\Debug\net8.0\AgriShop_Consume.pdb
 D:\Agriculture-Shop-Management\AgriShop_Consume\obj\Debug\net8.0\AgriShop_Consume.genruntimeconfig.cache
 D:\Agriculture-Shop-Management\AgriShop_Consume\obj\Debug\net8.0\ref\AgriShop_Consume.dll
+D:\Agriculture-Shop-Management\AgriShop_Consume\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Agriculture-Shop-Management\AgriShop_Consume\obj\Debug\net8.0\AgriShop_Consume.csproj.AssemblyReference.cache
+D:\Agriculture-Shop-Management\AgriShop_Consume\obj\Debug\net8.0\AgriShop.697AE30A.Up2Date
