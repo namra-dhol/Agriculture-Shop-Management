@@ -19,17 +19,21 @@
     <div class="row">
         <!-- Product Image -->
         <div class="col-md-6 mb-4">
-            <div class="card">
+            <div class="card product-image-card">
                 @if (!string.IsNullOrEmpty(Model.ProductImg))
                 {
-                    <img src="@Model.ProductImg" class="card-img-top" alt="@Model.ProductName" style="max-height: 400px; object-fit: cover;">
+                    <img src="@Model.ProductImg" class="card-img-top product-main-image" alt="@Model.ProductName" 
+                         onerror="this.onerror=null; this.src='/Image/fertilizer-1.jpg'; this.classList.add('fallback-image');">
                 }
                 else
                 {
-                    <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 400px;">
+                    <div class="card-img-top bg-light d-flex align-items-center justify-content-center fallback-image-container">
                         <i class="bi bi-image text-muted" style="font-size: 5rem;"></i>
                     </div>
                 }
+                <div class="card-body text-center">
+                    <small class="text-muted">Click image to enlarge</small>
+                </div>
             </div>
         </div>
 
@@ -105,7 +109,7 @@
             }
 
             <!-- Product Information -->
-            <div class="mt-4">
+      @*       <div class="mt-4">
                 <h6>Product Information:</h6>
                 <ul class="list-unstyled">
                     <li><strong>Product ID:</strong> @Model.ProductId</li>
@@ -118,12 +122,61 @@
                         <li><strong>Last Updated:</strong> @Model.ModifiedAt.Value.ToString("MMM dd, yyyy")</li>
                     }
                 </ul>
+            </div> *@
+        </div>
+    </div>
+</div>
+
+<!-- Image Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imageModalLabel">@Model.ProductName</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                @if (!string.IsNullOrEmpty(Model.ProductImg))
+                {
+                    <img src="@Model.ProductImg" class="img-fluid" alt="@Model.ProductName" 
+                         onerror="this.onerror=null; this.src='/Image/fertilizer-1.jpg';">
+                }
+                else
+                {
+                    <div class="bg-light d-flex align-items-center justify-content-center" style="height: 400px;">
+                        <i class="bi bi-image text-muted" style="font-size: 5rem;"></i>
+                    </div>
+                }
             </div>
         </div>
     </div>
 </div>
 
 <style>
+    .product-image-card {
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+    }
+    
+    .product-image-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .product-main-image {
+        max-height: 400px;
+        object-fit: cover;
+        transition: all 0.2s ease-in-out;
+    }
+    
+    .fallback-image-container {
+        height: 400px;
+    }
+    
+    .fallback-image {
+        opacity: 0.7;
+    }
+    
     .variant-card {
         transition: all 0.2s ease-in-out;
         cursor: pointer;
@@ -159,6 +212,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const selectButtons = document.querySelectorAll('.select-variant-btn');
     const selectedVariantSummary = document.getElementById('selectedVariantSummary');
     const selectedVariantInfo = document.getElementById('selectedVariantInfo');
+    const productImageCard = document.querySelector('.product-image-card');
+
+    // Handle product image click to open modal
+    if (productImageCard) {
+        productImageCard.addEventListener('click', function() {
+            const imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+            imageModal.show();
+        });
+    }
 
     selectButtons.forEach(button => {
         button.addEventListener('click', function() {

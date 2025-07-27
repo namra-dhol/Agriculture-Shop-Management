@@ -12,9 +12,10 @@
                 </div>
                 <div class="card-body">
                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                    <form asp-action="ProductAdd" method="post">
+                    <form asp-action="ProductAdd" method="post" enctype="multipart/form-data">
                         @Html.HiddenFor(m => m.ProductId)
                         @Html.HiddenFor(m => m.CreatedAt)
+                        @Html.HiddenFor(m => m.ProductImg)
                         <div class="mb-3">
                             <label class="form-label">Product Name</label>
                             <input asp-for="ProductName" class="form-control" type="text" required />
@@ -35,15 +36,63 @@
                             <input asp-for="Stock" class="form-control" type="number" min="0" required />
                             @Html.ValidationMessageFor(m => m.Stock, "", new { @class = "text-danger" })
                         </div>
+                        
+                        <!-- Image Upload Section -->
                         <div class="mb-3">
-                            <label class="form-label">Product Image URL</label>
-                            <input asp-for="ProductImg" class="form-control" type="text" />
+                            <label class="form-label">Product Image</label>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <input type="file" name="productImage" class="form-control" accept="image/*" id="productImageInput" />
+                                    <small class="form-text text-muted">Upload an image file (JPG, PNG, GIF) or use one of the sample images below.</small>
+                                    @if (ViewData.ModelState["productImage"] != null && ViewData.ModelState["productImage"].Errors.Count > 0)
+                                    {
+                                        <span class="text-danger">@ViewData.ModelState["productImage"].Errors[0].ErrorMessage</span>
+                                    }
+                                </div>
+                                <div class="col-md-4">
+                                   @*  <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#sampleImagesModal">
+                                        <i class="bi bi-images"></i> Sample Images
+                                    </button> *@
+                                </div>
+                            </div>
                         </div>
+
+                        <!-- Current Image Display -->
+                        @if (!string.IsNullOrEmpty(Model.ProductImg))
+                        {
+                            <div class="mb-3">
+                                <label class="form-label">Current Image:</label>
+                                <div class="text-center">
+                                    <img src="@Model.ProductImg" alt="Current Product Image" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" id="currentImagePreview" 
+                                         onerror="this.onerror=null; this.src='/Image/fertilizer-1.jpg'; this.classList.add('fallback-image');" />
+                                </div>
+                                <div class="text-center mt-2">
+                                    <button type="button" class="btn btn-outline-danger btn-sm" id="removeCurrentImage">
+                                        <i class="bi bi-trash"></i> Remove Current Image
+                                    </button>
+                                </div>
+                            </div>
+                        }
+
+                        <!-- Image Preview -->
+                        <div class="mb-3" id="imagePreviewContainer" style="display: none;">
+                            <label class="form-label">Image Preview:</label>
+                            <div class="text-center">
+                                <img id="imagePreview" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                            </div>
+                            <div class="text-center mt-2">
+                                <button type="button" class="btn btn-outline-secondary btn-sm" id="removePreviewImage">
+                                    <i class="bi bi-x-circle"></i> Remove Preview
+                                </button>
+                            </div>
+                        </div>
+
                         <div class="mb-3">
                             <label class="form-label">User</label>
                             @Html.DropDownListFor(m => m.UserId, Model.UserList, "-- Select User --", new { @class = "form-control" })
                             @Html.ValidationMessageFor(m => m.UserId, "", new { @class = "text-danger" })
                         </div>
+                        
                         <button type="submit" class="btn btn-primary-custom w-100 mt-3">Save Product</button>
                     </form>
                 </div>
@@ -51,6 +100,127 @@
         </div>
     </div>
 </div>
+
+@* 
+<!-- Sample Images Modal -->
+<div class="modal fade" id="sampleImagesModal" tabindex="-1" aria-labelledby="sampleImagesModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="sampleImagesModalLabel">Select Sample Image</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="card sample-image-card" data-image-path="/Image/fertilizer-1.jpg">
+                            <img src="/Image/fertilizer-1.jpg" class="card-img-top" alt="Fertilizer 1" style="height: 150px; object-fit: cover;">
+                            <div class="card-body">
+                                <p class="card-text text-center">Fertilizer 1</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card sample-image-card" data-image-path="/Image/fertilizer-2.jpg">
+                            <img src="/Image/fertilizer-2.jpg" class="card-img-top" alt="Fertilizer 2" style="height: 150px; object-fit: cover;">
+                            <div class="card-body">
+                                <p class="card-text text-center">Fertilizer 2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card sample-image-card" data-image-path="/Image/fertilizer-3.jpg">
+                            <img src="/Image/fertilizer-3.jpg" class="card-img-top" alt="Fertilizer 3" style="height: 150px; object-fit: cover;">
+                            <div class="card-body">
+                                <p class="card-text text-center">Fertilizer 3</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card sample-image-card" data-image-path="/Image/fertilizer-4.jpg">
+                            <img src="/Image/fertilizer-4.jpg" class="card-img-top" alt="Fertilizer 4" style="height: 150px; object-fit: cover;">
+                            <div class="card-body">
+                                <p class="card-text text-center">Fertilizer 4</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card sample-image-card" data-image-path="/Image/farming-tool-1.jpg">
+                            <img src="/Image/farming-tool-1.jpg" class="card-img-top" alt="Farming Tool 1" style="height: 150px; object-fit: cover;">
+                            <div class="card-body">
+                                <p class="card-text text-center">Farming Tool 1</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card sample-image-card" data-image-path="/Image/farming-tool-2.jpg">
+                            <img src="/Image/farming-tool-2.jpg" class="card-img-top" alt="Farming Tool 2" style="height: 150px; object-fit: cover;">
+                            <div class="card-body">
+                                <p class="card-text text-center">Farming Tool 2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card sample-image-card" data-image-path="/Image/farming-tool-3.jpg">
+                            <img src="/Image/farming-tool-3.jpg" class="card-img-top" alt="Farming Tool 3" style="height: 150px; object-fit: cover;">
+                            <div class="card-body">
+                                <p class="card-text text-center">Farming Tool 3</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card sample-image-card" data-image-path="/Image/farming-tool-4.jpg">
+                            <img src="/Image/farming-tool-4.jpg" class="card-img-top" alt="Farming Tool 4" style="height: 150px; object-fit: cover;">
+                            <div class="card-body">
+                                <p class="card-text text-center">Farming Tool 4</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card sample-image-card" data-image-path="/Image/pestisides-1.jpg">
+                            <img src="/Image/pestisides-1.jpg" class="card-img-top" alt="Pesticides 1" style="height: 150px; object-fit: cover;">
+                            <div class="card-body">
+                                <p class="card-text text-center">Pesticides 1</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card sample-image-card" data-image-path="/Image/pestisides-2.jpg">
+                            <img src="/Image/pestisides-2.jpg" class="card-img-top" alt="Pesticides 2" style="height: 150px; object-fit: cover;">
+                            <div class="card-body">
+                                <p class="card-text text-center">Pesticides 2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card sample-image-card" data-image-path="/Image/pestisides-3.jpg">
+                            <img src="/Image/pestisides-3.jpg" class="card-img-top" alt="Pesticides 3" style="height: 150px; object-fit: cover;">
+                            <div class="card-body">
+                                <p class="card-text text-center">Pesticides 3</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card sample-image-card" data-image-path="/Image/pestisides-4.jpg">
+                            <img src="/Image/pestisides-4.jpg" class="card-img-top" alt="Pesticides 4" style="height: 150px; object-fit: cover;">
+                            <div class="card-body">
+                                <p class="card-text text-center">Pesticides 4</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-3">
+                    <small class="text-muted">Click on an image to select it, then click "Done" to confirm.</small>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="confirmImageSelection">Done</button>
+            </div>
+        </div>
+    </div>
+</div>
+ *@
 <style>
     .bg-primary-custom {
         background-color: #22c55e !important;
@@ -65,4 +235,138 @@
         border-color: #16a34a;
         color: #fff;
     }
+    
+    .sample-image-card {
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        border: 2px solid transparent;
+    }
+    
+    .sample-image-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        border-color: #22c55e;
+    }
+    
+    .sample-image-card.selected {
+        border-color: #22c55e;
+        background-color: #f0f9ff;
+    }
+    
+    .fallback-image {
+        opacity: 0.7;
+    }
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const imageInput = document.getElementById('productImageInput');
+    const imagePreview = document.getElementById('imagePreview');
+    const imagePreviewContainer = document.getElementById('imagePreviewContainer');
+    const sampleImageCards = document.querySelectorAll('.sample-image-card');
+    const removeCurrentImageBtn = document.getElementById('removeCurrentImage');
+    const removePreviewImageBtn = document.getElementById('removePreviewImage');
+    const confirmImageSelectionBtn = document.getElementById('confirmImageSelection');
+    let selectedImagePath = null;
+
+    // Reset modal when it opens
+    document.getElementById('sampleImagesModal').addEventListener('show.bs.modal', function() {
+        // Clear previous selection
+        sampleImageCards.forEach(c => c.classList.remove('selected'));
+        selectedImagePath = null;
+        confirmImageSelectionBtn.textContent = 'Done';
+    });
+
+    // Handle file input change
+    imageInput.addEventListener('change', function() {
+        const file = this.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                imagePreview.src = e.target.result;
+                imagePreviewContainer.style.display = 'block';
+                selectedImagePath = null; // Clear selected sample image
+            };
+            reader.readAsDataURL(file);
+        } else {
+            imagePreviewContainer.style.display = 'none';
+        }
+    });
+
+    // Handle sample image selection
+    sampleImageCards.forEach(card => {
+        card.addEventListener('click', function() {
+            // Remove selected class from all cards
+            sampleImageCards.forEach(c => c.classList.remove('selected'));
+            
+            // Add selected class to current card
+            this.classList.add('selected');
+            
+            // Store the selected image path
+            selectedImagePath = this.getAttribute('data-image-path');
+            
+            // Show preview
+            imagePreview.src = selectedImagePath;
+            imagePreviewContainer.style.display = 'block';
+            
+            // Clear file input
+            imageInput.value = '';
+            
+            // Update modal button text
+            confirmImageSelectionBtn.textContent = `Done - Selected: ${this.querySelector('.card-text').textContent}`;
+        });
+    });
+
+    // Handle confirm image selection
+    confirmImageSelectionBtn.addEventListener('click', function() {
+        if (selectedImagePath) {
+            // Create a hidden input for the selected image path
+            let hiddenInput = document.querySelector('input[name="selectedImagePath"]');
+            if (!hiddenInput) {
+                hiddenInput = document.createElement('input');
+                hiddenInput.type = 'hidden';
+                hiddenInput.name = 'selectedImagePath';
+                document.querySelector('form').appendChild(hiddenInput);
+            }
+            hiddenInput.value = selectedImagePath;
+            console.log('Selected image path:', selectedImagePath);
+        }
+        
+        // Close the modal
+        const modal = bootstrap.Modal.getInstance(document.getElementById('sampleImagesModal'));
+        modal.hide();
+    });
+
+    // Handle remove current image
+    if (removeCurrentImageBtn) {
+        removeCurrentImageBtn.addEventListener('click', function() {
+            const currentImagePreview = document.getElementById('currentImagePreview');
+            if (currentImagePreview) {
+                currentImagePreview.parentElement.parentElement.style.display = 'none';
+            }
+            
+            // Clear the ProductImg field
+            let hiddenInput = document.querySelector('input[name="ProductImg"]');
+            if (!hiddenInput) {
+                hiddenInput = document.createElement('input');
+                hiddenInput.type = 'hidden';
+                hiddenInput.name = 'ProductImg';
+                document.querySelector('form').appendChild(hiddenInput);
+            }
+            hiddenInput.value = '';
+        });
+    }
+
+    // Handle remove preview image
+    if (removePreviewImageBtn) {
+        removePreviewImageBtn.addEventListener('click', function() {
+            imagePreviewContainer.style.display = 'none';
+            imageInput.value = '';
+            selectedImagePath = null;
+            
+            // Remove selected class from sample image cards
+            sampleImageCards.forEach(c => c.classList.remove('selected'));
+        });
+    }
+});
+</script>

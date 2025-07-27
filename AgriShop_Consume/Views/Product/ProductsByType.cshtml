@@ -5,6 +5,15 @@
 }
 
 <div class="container mt-4">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="@Url.Action("Index", "Home")">Home</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">@ViewBag.ProductTypeName</li>
+        </ol>
+    </nav>
+
     <h2 class="mb-4">@ViewBag.ProductTypeName</h2>
     
     @if (!Model.Any())
@@ -20,14 +29,15 @@
             @foreach (var product in Model)
             {
                 <div class="col-md-4 col-lg-3 mb-4">
-                    <div class="card h-100 shadow-sm">
+                    <div class="card h-100 shadow-sm product-card">
                         @if (!string.IsNullOrEmpty(product.ProductImg))
                         {
-                            <img src="@product.ProductImg" class="card-img-top" alt="@product.ProductName" style="height: 200px; object-fit: cover;">
+                            <img src="@product.ProductImg" class="card-img-top product-image" alt="@product.ProductName" 
+                                 onerror="this.onerror=null; this.src='/Image/fertilizer-1.jpg'; this.classList.add('fallback-image');">
                         }
                         else
                         {
-                            <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+                            <div class="card-img-top fallback-image-container">
                                 <i class="bi bi-image text-muted" style="font-size: 3rem;"></i>
                             </div>
                         }
@@ -36,13 +46,21 @@
                             <h5 class="card-title">@product.ProductName</h5>
                             <p class="card-text text-muted">
                                 <i class="bi bi-box"></i>
-                                Stock: @(product.Stock?.ToString() ?? "N/A")
+                                Stock: 
+                                @if (product.Stock.HasValue && product.Stock > 0)
+                                {
+                                    <span class="text-success">@product.Stock units</span>
+                                }
+                                else
+                                {
+                                    <span class="text-danger">Out of Stock</span>
+                                }
                             </p>
                             
                             <div class="mt-auto">
                                 <a href="@Url.Action("ProductDetail", "Product", new { productId = product.ProductId })" 
                                    class="btn btn-primary w-100">
-                                    <i class="bi bi-eye"></i> View More
+                                    <i class="bi bi-eye"></i> View Details
                                 </a>
                             </div>
                         </div>
@@ -54,15 +72,60 @@
 </div>
 
 <style>
-    .card {
-        transition: transform 0.2s ease-in-out;
+    .product-card {
+        transition: all 0.3s ease-in-out;
+        border: none;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     
-    .card:hover {
+    .product-card:hover {
         transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.15);
     }
     
-    .card-img-top {
+    .product-image {
+        height: 200px;
+        object-fit: cover;
+        transition: all 0.3s ease;
+    }
+    
+    .product-image:hover {
+        transform: scale(1.05);
+    }
+    
+    .fallback-image-container {
+        height: 200px;
+        background-color: #f8f9fa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         border-bottom: 1px solid #dee2e6;
+    }
+    
+    .fallback-image {
+        opacity: 0.7;
+    }
+    
+    .card-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 0.75rem;
+    }
+    
+    .card-text {
+        font-size: 0.9rem;
+    }
+    
+    .btn-primary {
+        background-color: #22c55e;
+        border-color: #22c55e;
+        transition: all 0.2s ease;
+    }
+    
+    .btn-primary:hover {
+        background-color: #16a34a;
+        border-color: #16a34a;
+        transform: translateY(-1px);
     }
 </style> 

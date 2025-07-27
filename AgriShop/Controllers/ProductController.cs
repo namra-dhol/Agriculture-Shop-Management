@@ -44,9 +44,16 @@ namespace AgriShop.Controllers
         [HttpPost]
         public IActionResult InsertProduct(Product product)
         {
-            context.Products.Add(product);
-            context.SaveChanges();
-            return CreatedAtAction(nameof(GetProductById), new { id = product.ProductId }, product);
+            try
+            {
+                context.Products.Add(product);
+                context.SaveChanges();
+                return CreatedAtAction(nameof(GetProductById), new { id = product.ProductId }, product);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Error creating product: {ex.Message}");
+            }
         }
 
         #endregion
@@ -71,34 +78,38 @@ namespace AgriShop.Controllers
         #region UpdateProductById
 
         [HttpPut("{id}")]
-        public IActionResult UpdateDoctor(int id, Product product)
+        public IActionResult UpdateProduct(int id, Product product)
         {
-
-            if (id != product.ProductId)
+            try
             {
-                return BadRequest();
+                if (id != product.ProductId)
+                {
+                    return BadRequest("ID mismatch");
+                }
+
+                var existingProduct = context.Products.Find(id);
+                if (existingProduct == null)
+                {
+                    return NotFound("Product not found");
+                }
+
+               
+                existingProduct.ProductName = product.ProductName;
+                existingProduct.ProductTypeId = product.ProductTypeId;
+                existingProduct.SupplierId = product.SupplierId;
+                existingProduct.Stock = product.Stock;
+                existingProduct.ProductImg = product.ProductImg;
+                existingProduct.UserId = product.UserId;
+                existingProduct.ModifiedAt = DateTime.Now;
+
+                context.Products.Update(existingProduct);
+                context.SaveChanges();
+                return NoContent();
             }
-
-
-            var existingProduct = context.Products.Find(id);
-            if (existingProduct == null)
+            catch (Exception ex)
             {
-                return NotFound();
+                return BadRequest($"Error updating product: {ex.Message}");
             }
-
-           
-            existingProduct.ProductName = product.ProductName;
-            existingProduct.ProductTypeId = product.ProductTypeId;
-            existingProduct.SupplierId = product.SupplierId;
-            existingProduct.Stock = product.Stock;
-            existingProduct.ProductImg = product.ProductImg;
-            existingProduct.UserId = product.UserId;
-            existingProduct.ModifiedAt = DateTime.Now;
-
-
-            context.Products.Update(existingProduct);
-            context.SaveChanges();
-            return NoContent();
         }
 
         #endregion

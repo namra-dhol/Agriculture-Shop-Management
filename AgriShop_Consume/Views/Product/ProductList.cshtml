@@ -34,6 +34,25 @@
         transform: translateY(-2px);
         box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
+    .product-image {
+        height: 200px;
+        object-fit: cover;
+        width: 100%;
+        transition: all 0.3s ease;
+    }
+    .product-image:hover {
+        transform: scale(1.05);
+    }
+    .fallback-image-container {
+        height: 200px;
+        background-color: #f8f9fa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .fallback-image {
+        opacity: 0.7;
+    }
     .admin-header {
         background: linear-gradient(135deg, var(--primary-color) 0%, #16a34a 100%);
         color: white;
@@ -48,6 +67,21 @@
     .action-buttons .btn {
         margin-right: 0.25rem;
         margin-bottom: 0.25rem;
+    }
+    .table-product-image {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 4px;
+    }
+    .table-fallback-image {
+        width: 50px;
+        height: 50px;
+        background-color: #f8f9fa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
     }
     @@media (max-width: 767.98px) {
         .admin-header .h3 {
@@ -121,6 +155,21 @@
                     {
                         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex">
                             <div class="card product-card h-100 w-100">
+                                <!-- Product Image -->
+                                <div class="card-img-top">
+                                    @if (!string.IsNullOrEmpty(item.ProductImg))
+                                    {
+                                        <img src="@item.ProductImg" class="product-image" alt="@item.ProductName" 
+                                             onerror="this.onerror=null; this.src='/Image/fertilizer-1.jpg'; this.classList.add('fallback-image');">
+                                    }
+                                    else
+                                    {
+                                        <div class="fallback-image-container">
+                                            <i class="bi bi-image text-muted" style="font-size: 3rem;"></i>
+                                        </div>
+                                    }
+                                </div>
+                                
                                 <div class="card-header bg-white border-bottom-0 pb-0">
                                     <div class="d-flex justify-content-between align-items-start">
                                         <h6 class="card-title text-primary-custom fw-semibold mb-1">@item.ProductName</h6>
@@ -196,6 +245,7 @@
                             <table class="table table-hover mb-0">
                                 <thead class="table-light">
                                     <tr>
+                                        <th>Image</th>
                                         <th>Name</th>
                                         <th>Stock</th>
                                         <th>Type ID</th>
@@ -207,6 +257,19 @@
                                     @foreach (var item in Model)
                                     {
                                         <tr>
+                                            <td>
+                                                @if (!string.IsNullOrEmpty(item.ProductImg))
+                                                {
+                                                    <img src="@item.ProductImg" class="table-product-image" alt="@item.ProductName" 
+                                                         onerror="this.onerror=null; this.src='/Image/fertilizer-1.jpg'; this.classList.add('fallback-image');">
+                                                }
+                                                else
+                                                {
+                                                    <div class="table-fallback-image">
+                                                        <i class="bi bi-image text-muted"></i>
+                                                    </div>
+                                                }
+                                            </td>
                                             <td>@item.ProductName</td>
                                             <td>
                                                 @{

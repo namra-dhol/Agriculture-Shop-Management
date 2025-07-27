@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AgriShop_Consume")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+641e6d90ac5ee63af43068a4d719548063792f9e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1cd3d0babe670ee91a431ed690c01be1dd19265b")]
 [assembly: System.Reflection.AssemblyProductAttribute("AgriShop_Consume")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AgriShop_Consume")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

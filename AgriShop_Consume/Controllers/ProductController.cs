@@ -4,32 +4,25 @@ using Microsoft.AspNetCore.Mvc;
 using System.Net.Http.Headers;
 using System.Text.Json;
 using System.Text;
+using Newtonsoft.Json;
 
 public class ProductController : Controller
 {
-    private readonly HttpClient _httpClient;
+    private readonly HttpClient _client;
+    private readonly IWebHostEnvironment _webHostEnvironment;
 
-    public ProductController()
+    public ProductController(IHttpClientFactory httpClientFactory, IWebHostEnvironment webHostEnvironment)
     {
-        _httpClient = new HttpClient
-        {
-            BaseAddress = new Uri("http://localhost:5275/api/")
-        };
-        _httpClient.DefaultRequestHeaders.Accept.Clear();
-        _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+        _client = httpClientFactory.CreateClient();
+        _client.BaseAddress = new Uri("http://localhost:5275/api/");
+        _webHostEnvironment = webHostEnvironment;
     }
 
     public async Task<IActionResult> ProductList()
     {
-        List<ProductModel> products = new();
-        HttpResponseMessage response = await _httpClient.GetAsync("Product");
-
-        if (response.IsSuccessStatusCode)
-        {
-            var data = await response.Content.ReadAsStringAsync();
-            products = JsonSerializer.Deserialize<List<ProductModel>>(data, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
-        }
-
+        var response = await _client.GetAsync("Product");
+        var json = await response.Content.ReadAsStringAsync();
+        var products = JsonConvert.DeserializeObject<List<ProductModel>>(json);
         return View(products);
     }
 
@@ -41,8 +34,14 @@ public class ProductController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> ProductAdd(ProductModel product)
+    public async Task<IActionResult> ProductAdd(ProductModel product, IFormFile? productImage, string? selectedImagePath)
     {
+        // Require image for new product (either file upload or sample selection)
+        if (product.ProductId == 0 && (productImage == null || productImage.Length == 0) && string.IsNullOrEmpty(selectedImagePath))
+        {
+            ModelState.AddModelError("productImage", "Please select an image for the product (upload file or choose from sample images).");
+        }
+
         if (!ModelState.IsValid)
         {
             await PopulateDropdowns(product);
@@ -51,26 +50,50 @@ public class ProductController : Controller
 
         try
         {
+            // Handle image upload or selection
+            if (productImage != null && productImage.Length > 0)
+            {
+                // Save uploaded file
+                product.ProductImg = await SaveUploadedImage(productImage);
+                System.Diagnostics.Debug.WriteLine($"Uploaded image: {product.ProductImg}");
+            }
+            else if (!string.IsNullOrEmpty(selectedImagePath))
+            {
+                // Use selected sample image
+                product.ProductImg = selectedImagePath;
+                System.Diagnostics.Debug.WriteLine($"Selected image path: {product.ProductImg}");
+            }
+            // else: If editing and no new image selected, keep existing image (do nothing)
 
             if (product.ProductId == 0)
                 product.CreatedAt = DateTime.Now;
             else
                 product.ModifiedAt = DateTime.Now;
 
-            var jsonData = JsonSerializer.Serialize(product);
-            var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+            var content = new StringContent(JsonConvert.SerializeObject(product), Encoding.UTF8, "application/json");
 
             HttpResponseMessage response;
-
-            if (product.ProductId == 0)
-                response = await _httpClient.PostAsync("Product", content);
+            if (product.ProductId > 0)
+            {
+                // Update existing product
+                response = await _client.PutAsync($"Product/{product.ProductId}", content);
+            }
             else
-                response = await _httpClient.PutAsync($"Product/{product.ProductId}", content);
+            {
+                // Create new product
+                response = await _client.PostAsync("Product", content);
+            }
 
             if (response.IsSuccessStatusCode)
+            {
+                TempData["Success"] = product.ProductId > 0 ? "Product updated successfully!" : "Product created successfully!";
                 return RedirectToAction("ProductList");
-
-            ModelState.AddModelError("", "Failed to save product.");
+            }
+            else
+            {
+                var errorContent = await response.Content.ReadAsStringAsync();
+                ModelState.AddModelError("", $"Failed to save product. Status: {response.StatusCode}, Error: {errorContent}");
+            }
         }
         catch (Exception ex)
         {
@@ -81,19 +104,46 @@ public class ProductController : Controller
         return View("ProductForm", product);
     }
 
+    private async Task<string> SaveUploadedImage(IFormFile imageFile)
+    {
+        try
+        {
+            // Create uploads directory if it doesn't exist
+            var uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
+            if (!Directory.Exists(uploadsFolder))
+            {
+                Directory.CreateDirectory(uploadsFolder);
+            }
+
+            // Generate unique filename
+            var fileName = Guid.NewGuid().ToString() + Path.GetExtension(imageFile.FileName);
+            var filePath = Path.Combine(uploadsFolder, fileName);
+
+            // Save the file
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                await imageFile.CopyToAsync(stream);
+            }
+
+            // Return the relative path for the database
+            return "/uploads/" + fileName;
+        }
+        catch (Exception ex)
+        {
+            throw new Exception($"Error saving image: {ex.Message}");
+        }
+    }
+
     public async Task<IActionResult> Edit(int id)
     {
-        ProductModel product = null;
-        var response = await _httpClient.GetAsync($"Product/{id}");
-
-        if (response.IsSuccessStatusCode)
+        var response = await _client.GetAsync($"Product/{id}");
+        if (!response.IsSuccessStatusCode)
         {
-            var json = await response.Content.ReadAsStringAsync();
-            product = JsonSerializer.Deserialize<ProductModel>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+            return NotFound();
         }
 
-        if (product == null)
-            return NotFound();
+        var json = await response.Content.ReadAsStringAsync();
+        var product = JsonConvert.DeserializeObject<ProductModel>(json);
 
         await PopulateDropdowns(product);
         return View("ProductForm", product);
@@ -101,8 +151,8 @@ public class ProductController : Controller
 
     public async Task<IActionResult> Delete(int id)
     {
-        var response = await _httpClient.DeleteAsync($"Product/{id}");
-        TempData["Message"] = response.IsSuccessStatusCode ? "Deleted" : "Failed to delete";
+        await _client.DeleteAsync($"Product/{id}");
+        TempData["Message"] = "Product deleted successfully";
         return RedirectToAction("ProductList");
     }
 
@@ -114,16 +164,15 @@ public class ProductController : Controller
         model.UserList = await GetDropdown("product/dropdown/users");
     }
 
-
     private async Task<List<SelectListItem>> GetDropdown(string endpoint)
     {
         List<SelectListItem> items = new();
 
-        var response = await _httpClient.GetAsync(endpoint);
+        var response = await _client.GetAsync(endpoint);
         if (response.IsSuccessStatusCode)
         {
             var data = await response.Content.ReadAsStringAsync();
-            var rawItems = JsonSerializer.Deserialize<List<Dictionary<string, object>>>(data);
+            var rawItems = JsonConvert.DeserializeObject<List<Dictionary<string, object>>>(data);
 
             foreach (var item in rawItems)
             {
@@ -141,22 +190,17 @@ public class ProductController : Controller
     // New methods for product browsing functionality
     public async Task<IActionResult> ProductsByType(int productTypeId)
     {
-        List<ProductModel> products = new();
-        HttpResponseMessage response = await _httpClient.GetAsync($"Product/bytype-simple/{productTypeId}");
-
-        if (response.IsSuccessStatusCode)
-        {
-            var data = await response.Content.ReadAsStringAsync();
-            products = JsonSerializer.Deserialize<List<ProductModel>>(data, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
-        }
+        var response = await _client.GetAsync($"Product/bytype-simple/{productTypeId}");
+        var json = await response.Content.ReadAsStringAsync();
+        var products = JsonConvert.DeserializeObject<List<ProductModel>>(json);
 
         // Get product type name for display
-        var productTypeResponse = await _httpClient.GetAsync($"ProductType/{productTypeId}");
+        var productTypeResponse = await _client.GetAsync($"ProductType/{productTypeId}");
         string productTypeName = "Products";
         if (productTypeResponse.IsSuccessStatusCode)
         {
             var typeData = await productTypeResponse.Content.ReadAsStringAsync();
-            var productType = JsonSerializer.Deserialize<ProductTypeModel>(typeData, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+            var productType = JsonConvert.DeserializeObject<ProductTypeModel>(typeData);
             productTypeName = productType?.TypeName ?? "Products";
         }
 
@@ -168,17 +212,14 @@ public class ProductController : Controller
 
     public async Task<IActionResult> ProductDetail(int productId)
     {
-        ProductWithVariantsModel product = null;
-        var response = await _httpClient.GetAsync($"Product/with-variants/{productId}");
-
-        if (response.IsSuccessStatusCode)
+        var response = await _client.GetAsync($"Product/with-variants/{productId}");
+        if (!response.IsSuccessStatusCode)
         {
-            var json = await response.Content.ReadAsStringAsync();
-            product = JsonSerializer.Deserialize<ProductWithVariantsModel>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+            return NotFound();
         }
 
-        if (product == null)
-            return NotFound();
+        var json = await response.Content.ReadAsStringAsync();
+        var product = JsonConvert.DeserializeObject<ProductWithVariantsModel>(json);
 
         return View(product);
     }
@@ -231,22 +272,17 @@ public class ProductController : Controller
     // Helper method to get products by type and return the correct view
     private async Task<IActionResult> GetProductsByTypeWithView(int productTypeId)
     {
-        List<ProductModel> products = new();
-        HttpResponseMessage response = await _httpClient.GetAsync($"Product/bytype-simple/{productTypeId}");
-
-        if (response.IsSuccessStatusCode)
-        {
-            var data = await response.Content.ReadAsStringAsync();
-            products = JsonSerializer.Deserialize<List<ProductModel>>(data, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
-        }
+        var response = await _client.GetAsync($"Product/bytype-simple/{productTypeId}");
+        var json = await response.Content.ReadAsStringAsync();
+        var products = JsonConvert.DeserializeObject<List<ProductModel>>(json);
 
         // Get product type name for display
-        var productTypeResponse = await _httpClient.GetAsync($"ProductType/{productTypeId}");
+        var productTypeResponse = await _client.GetAsync($"ProductType/{productTypeId}");
         string productTypeName = "Products";
         if (productTypeResponse.IsSuccessStatusCode)
         {
             var typeData = await productTypeResponse.Content.ReadAsStringAsync();
-            var productType = JsonSerializer.Deserialize<ProductTypeModel>(typeData, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+            var productType = JsonConvert.DeserializeObject<ProductTypeModel>(typeData);
             productTypeName = productType?.TypeName ?? "Products";
         }
 
