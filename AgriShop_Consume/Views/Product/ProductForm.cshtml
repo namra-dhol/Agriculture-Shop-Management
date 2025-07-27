@@ -3,49 +3,66 @@
 @{
     ViewBag.Title = Model.ProductId == 0 ? "Add Product" : "Edit Product";
 }
-
-<h2>@ViewBag.Title</h2>
-
-@Html.ValidationSummary(true, "", new { @class = "text-danger" })
-
-<form asp-action="ProductAdd" method="post">
-    @Html.HiddenFor(m => m.ProductId)
-    @Html.HiddenFor(m => m.CreatedAt)
-
-    <div class="form-group">
-        <label>Product Name</label>
-        <input asp-for="ProductName" class="form-control" type="text" required />
-        @Html.ValidationMessageFor(m => m.ProductName, "", new { @class = "text-danger" })
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary-custom text-white">
+                    <h2 class="mb-0">@ViewBag.Title</h2>
+                </div>
+                <div class="card-body">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <form asp-action="ProductAdd" method="post">
+                        @Html.HiddenFor(m => m.ProductId)
+                        @Html.HiddenFor(m => m.CreatedAt)
+                        <div class="mb-3">
+                            <label class="form-label">Product Name</label>
+                            <input asp-for="ProductName" class="form-control" type="text" required />
+                            @Html.ValidationMessageFor(m => m.ProductName, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Product Type</label>
+                            @Html.DropDownListFor(m => m.ProductTypeId, Model.ProductTypeList, "-- Select Product Type --", new { @class = "form-control", required = "required" })
+                            @Html.ValidationMessageFor(m => m.ProductTypeId, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Supplier</label>
+                            @Html.DropDownListFor(m => m.SupplierId, Model.SupplierList, "-- Select Supplier --", new { @class = "form-control", required = "required" })
+                            @Html.ValidationMessageFor(m => m.SupplierId, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Stock</label>
+                            <input asp-for="Stock" class="form-control" type="number" min="0" required />
+                            @Html.ValidationMessageFor(m => m.Stock, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Product Image URL</label>
+                            <input asp-for="ProductImg" class="form-control" type="text" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">User</label>
+                            @Html.DropDownListFor(m => m.UserId, Model.UserList, "-- Select User --", new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.UserId, "", new { @class = "text-danger" })
+                        </div>
+                        <button type="submit" class="btn btn-primary-custom w-100 mt-3">Save Product</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="form-group">
-        <label>Product Type</label>
-        @Html.DropDownListFor(m => m.ProductTypeId, Model.ProductTypeList, "-- Select Product Type --", new { @class = "form-control", required = "required" })
-        @Html.ValidationMessageFor(m => m.ProductTypeId, "", new { @class = "text-danger" })
-    </div>
-
-    <div class="form-group">
-        <label>Supplier</label>
-        @Html.DropDownListFor(m => m.SupplierId, Model.SupplierList, "-- Select Supplier --", new { @class = "form-control", required = "required" })
-        @Html.ValidationMessageFor(m => m.SupplierId, "", new { @class = "text-danger" })
-    </div>
-
-    <div class="form-group">
-        <label>Stock</label>
-        <input asp-for="Stock" class="form-control" type="number" min="0" required />
-        @Html.ValidationMessageFor(m => m.Stock, "", new { @class = "text-danger" })
-    </div>
-
-    <div class="form-group">
-        <label>Product Image URL</label>
-        <input asp-for="ProductImg" class="form-control" type="text" />
-    </div>
-
-    <div class="form-group">
-        <label>User</label>
-        @Html.DropDownListFor(m => m.UserId, Model.UserList, "-- Select User --", new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.UserId, "", new { @class = "text-danger" })
-    </div>
-
-    <button type="submit" class="btn btn-primary mt-3">Save Product</button>
-</form>
+</div>
+<style>
+    .bg-primary-custom {
+        background-color: #22c55e !important;
+    }
+    .btn-primary-custom {
+        background-color: #22c55e;
+        border-color: #22c55e;
+        color: #fff;
+    }
+    .btn-primary-custom:hover {
+        background-color: #16a34a;
+        border-color: #16a34a;
+        color: #fff;
+    }
+</style>

@@ -1,16 +1,16 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAssetEndpoint Include="_content/AgriShop_Consume/AgriShop_Consume.0408syg732.bundle.scp.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AgriShop_Consume.0408syg732.bundle.scp.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"0408syg732"},{"Name":"integrity","Value":"sha256-cCmjgM2Mt8HAiH0U4laMjGjvEDENB5IoU6gWJeZJncM="},{"Name":"label","Value":"_content/AgriShop_Consume/AgriShop_Consume.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1134"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022cCmjgM2Mt8HAiH0U4laMjGjvEDENB5IoU6gWJeZJncM=\u0022"},{"Name":"Last-Modified","Value":"Thu, 10 Jul 2025 16:59:17 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/AgriShop_Consume/AgriShop_Consume.bundle.scp.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AgriShop_Consume.0408syg732.bundle.scp.css'))</AssetFile>
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AgriShop_Consume.l78b749b6x.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-cCmjgM2Mt8HAiH0U4laMjGjvEDENB5IoU6gWJeZJncM="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1134"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022cCmjgM2Mt8HAiH0U4laMjGjvEDENB5IoU6gWJeZJncM=\u0022"},{"Name":"Last-Modified","Value":"Thu, 10 Jul 2025 16:59:17 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-UUUksIqpQA8vsDu0OU41riieSkU1\u002B0w/kMlqiZoUnKA="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1400"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022UUUksIqpQA8vsDu0OU41riieSkU1\u002B0w/kMlqiZoUnKA=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Jul 2025 03:07:20 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AgriShop_Consume/AgriShop_Consume.l78b749b6x.bundle.scp.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AgriShop_Consume.l78b749b6x.bundle.scp.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"l78b749b6x"},{"Name":"integrity","Value":"sha256-UUUksIqpQA8vsDu0OU41riieSkU1\u002B0w/kMlqiZoUnKA="},{"Name":"label","Value":"_content/AgriShop_Consume/AgriShop_Consume.bundle.scp.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1400"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022UUUksIqpQA8vsDu0OU41riieSkU1\u002B0w/kMlqiZoUnKA=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Jul 2025 03:07:20 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/AgriShop_Consume/css/site.c2tiyv64ts.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>

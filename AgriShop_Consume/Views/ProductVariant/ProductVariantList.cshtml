@@ -1,0 +1,36 @@
+@model IEnumerable<AgriShop_Consume.Models.ProductVariantModel>
+
+@{
+    ViewData["Title"] = "Product Variant List";
+}
+
+<h2>Product Variant List</h2>
+<a class="btn btn-primary mb-2" asp-action="AddEdit">Add Product Variant</a>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>VariantId</th>
+            <th>ProductId</th>
+            <th>Size</th>
+            <th>Price</th>
+            <th>UserId</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var productVariant in Model)
+        {
+            <tr>
+                <td>@productVariant.VariantId</td>
+                <td>@productVariant.ProductId</td>
+                <td>@productVariant.Size</td>
+                <td>@productVariant.Price?.ToString("C")</td>
+                <td>@productVariant.UserId</td>
+                <td>
+                    <a class="btn btn-sm btn-warning" asp-action="AddEdit" asp-route-id="@productVariant.VariantId">Edit</a>
+                    <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="@productVariant.VariantId" onclick="return confirm('Are you sure?');">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table> 

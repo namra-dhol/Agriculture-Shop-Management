@@ -131,56 +131,82 @@ namespace AgriShop.Controllers
         }
         #endregion
 
-        //#region GetProductsByType & Variants
+    
+        // #region GetProductsByType & Variants (using select)
 
-        //[HttpGet("bytype/{productTypeId}")]
-        //public async Task<ActionResult<IEnumerable<Product>>> GetProductsByTypeIncludingVariants(int productTypeId)
-        //{
-        //    var products = await context.Products
-        //        .Include(p => p.ProductVariants)  
-        //        .Where(p => p.ProductTypeId == productTypeId)
-        //        .ToListAsync();
+        // [HttpGet("bytype/{productTypeId}")]
+        // public async Task<ActionResult> GetProductsByTypeIncludingVariants(int productTypeId)
+        // {
+        //     var products = await context.Products
+        //         .Where(p => p.ProductTypeId == productTypeId)
+        //         .Select(p => new
+        //         {
+        //             p.ProductId,
+        //             p.ProductName,
+        //             p.ProductImg,
+        //             ProductVariants = p.ProductVariants.Select(v => new
+        //             {
+        //                 v.Size,
+        //                 v.Price
+        //             }).ToList()
+        //         })
+        //         .ToListAsync();
 
-        //    if (products == null || products.Count == 0)
-        //        return NotFound($"No products found for ProductTypeId = {productTypeId}");
+        //     if (products == null || products.Count == 0)
+        //         return NotFound($"No products found for ProductTypeId = {productTypeId}");
 
-        //    return Ok(products);
+        //     return Ok(products);
+        // }
+        // #endregion
 
-        //    //var studentsWithMultipleCourses = students.GroupJoin(courses, s => s.Rno, c => c.Rno,
-        //    //(s, cs) => (Student: s, CourseCount: cs.Count()))
-        //    //.Where(sc => sc.CourseCount > 1);
-        //    //Console.WriteLine(string.Join(Environment.NewLine, studentsWithMultipleCourses
-        //    //    .Select(sc => $"Rno: {sc.Student.Rno}, Name: {sc.Student.Name}, Course Count: {sc.CourseCount}")));
-
-        //    //var products = context.Products.Join(ProductType , )
-
-        //}
-
-        //#endregion
-        #region GetProductsByType & Variants (using select)
-
-        [HttpGet("bytype/{productTypeId}")]
-        public async Task<ActionResult> GetProductsByTypeIncludingVariants(int productTypeId)
+        #region GetProductsByType (Simple)
+        [HttpGet("bytype-simple/{productTypeId}")]
+        public async Task<ActionResult<IEnumerable<Product>>> GetProductsByType(int productTypeId)
         {
             var products = await context.Products
                 .Where(p => p.ProductTypeId == productTypeId)
-                .Select(p => new
-                {
-                    p.ProductId,
-                    p.ProductName,
-                    p.ProductImg,
-                    ProductVariants = p.ProductVariants.Select(v => new
-                    {
-                        v.Size,
-                        v.Price
-                    }).ToList()
-                })
                 .ToListAsync();
 
             if (products == null || products.Count == 0)
                 return NotFound($"No products found for ProductTypeId = {productTypeId}");
 
             return Ok(products);
+        }
+        #endregion
+
+        #region GetProductWithVariants (View More)
+        [HttpGet("with-variants/{productId}")]
+        public async Task<ActionResult> GetProductWithVariants(int productId)
+        {
+            var product = await context.Products
+                .Where(p => p.ProductId == productId)
+                .Select(p => new
+                {
+                    p.ProductId,
+                    p.ProductName,
+                    p.ProductImg,
+                    p.Stock,
+                    p.CreatedAt,
+                    p.ModifiedAt,
+                    ProductType = new
+                    {
+                        p.ProductType.ProductTypeId,
+                        p.ProductType.TypeName
+                    },
+                    ProductVariants = p.ProductVariants.Select(v => new
+                    {
+                        v.VariantId,
+                        v.Size,
+                        v.Price,
+                        v.CreatedAt
+                    }).ToList()
+                })
+                .FirstOrDefaultAsync();
+
+            if (product == null)
+                return NotFound($"Product with ID {productId} not found");
+
+            return Ok(product);
         }
         #endregion
 

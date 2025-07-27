@@ -1,0 +1,189 @@
+@model AgriShop_Consume.Models.ProductWithVariantsModel
+
+@{
+    ViewData["Title"] = Model.ProductName;
+}
+
+<div class="container mt-4">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="@Url.Action("ProductsByType", "Product", new { productTypeId = Model.ProductType?.ProductTypeId })">
+                    @Model.ProductType?.TypeName
+                </a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">@Model.ProductName</li>
+        </ol>
+    </nav>
+
+    <div class="row">
+        <!-- Product Image -->
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                @if (!string.IsNullOrEmpty(Model.ProductImg))
+                {
+                    <img src="@Model.ProductImg" class="card-img-top" alt="@Model.ProductName" style="max-height: 400px; object-fit: cover;">
+                }
+                else
+                {
+                    <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 400px;">
+                        <i class="bi bi-image text-muted" style="font-size: 5rem;"></i>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <!-- Product Details -->
+        <div class="col-md-6">
+            <h2 class="mb-3">@Model.ProductName</h2>
+            
+            <div class="mb-3">
+                <span class="badge bg-primary">@Model.ProductType?.TypeName</span>
+            </div>
+
+            <div class="mb-3">
+                <strong>Stock:</strong> 
+                @if (Model.Stock.HasValue && Model.Stock > 0)
+                {
+                    <span class="text-success">@Model.Stock units available</span>
+                }
+                else
+                {
+                    <span class="text-danger">Out of Stock</span>
+                }
+            </div>
+
+            @if (Model.ProductVariants != null && Model.ProductVariants.Any())
+            {
+                <div class="mb-4">
+                    <h5>Available Variants:</h5>
+                    <div class="row">
+                        @foreach (var variant in Model.ProductVariants)
+                        {
+                            <div class="col-6 mb-2">
+                                <div class="card variant-card" data-variant-id="@variant.VariantId" data-price="@variant.Price">
+                                    <div class="card-body text-center p-3">
+                                        <h6 class="mb-2">@variant.Size</h6>
+                                        <div class="price-display">
+                                            <strong class="text-primary">@variant.Price?.ToString("C")</strong>
+                                        </div>
+                                        <button class="btn btn-outline-primary btn-sm mt-2 select-variant-btn" 
+                                                data-variant-id="@variant.VariantId" 
+                                                data-size="@variant.Size" 
+                                                data-price="@variant.Price">
+                                            Select
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+
+                <!-- Selected Variant Summary -->
+                <div class="card bg-light mb-3" id="selectedVariantSummary" style="display: none;">
+                    <div class="card-body">
+                        <h6>Selected Variant:</h6>
+                        <div id="selectedVariantInfo"></div>
+                        <div class="mt-3">
+                            <button class="btn btn-success me-2">
+                                <i class="bi bi-cart-plus"></i> Add to Cart
+                            </button>
+                            <button class="btn btn-primary">
+                                <i class="bi bi-heart"></i> Add to Wishlist
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-info">
+                    <i class="bi bi-info-circle"></i>
+                    No variants available for this product.
+                </div>
+            }
+
+            <!-- Product Information -->
+            <div class="mt-4">
+                <h6>Product Information:</h6>
+                <ul class="list-unstyled">
+                    <li><strong>Product ID:</strong> @Model.ProductId</li>
+                    @if (Model.CreatedAt.HasValue)
+                    {
+                        <li><strong>Added:</strong> @Model.CreatedAt.Value.ToString("MMM dd, yyyy")</li>
+                    }
+                    @if (Model.ModifiedAt.HasValue)
+                    {
+                        <li><strong>Last Updated:</strong> @Model.ModifiedAt.Value.ToString("MMM dd, yyyy")</li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .variant-card {
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        border: 2px solid transparent;
+    }
+    
+    .variant-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .variant-card.selected {
+        border-color: #007bff;
+        background-color: #f8f9fa;
+    }
+    
+    .price-display {
+        font-size: 1.1rem;
+    }
+    
+    .select-variant-btn {
+        transition: all 0.2s ease-in-out;
+    }
+    
+    .select-variant-btn:hover {
+        transform: scale(1.05);
+    }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const variantCards = document.querySelectorAll('.variant-card');
+    const selectButtons = document.querySelectorAll('.select-variant-btn');
+    const selectedVariantSummary = document.getElementById('selectedVariantSummary');
+    const selectedVariantInfo = document.getElementById('selectedVariantInfo');
+
+    selectButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const variantId = this.getAttribute('data-variant-id');
+            const size = this.getAttribute('data-size');
+            const price = this.getAttribute('data-price');
+            
+            // Remove selected class from all cards
+            variantCards.forEach(card => card.classList.remove('selected'));
+            
+            // Add selected class to current card
+            this.closest('.variant-card').classList.add('selected');
+            
+            // Update selected variant summary
+            selectedVariantInfo.innerHTML = `
+                <strong>Size:</strong> ${size}<br>
+                <strong>Price:</strong> <span class="text-primary">$${price}</span>
+            `;
+            
+            // Show the summary
+            selectedVariantSummary.style.display = 'block';
+            
+            // Scroll to summary
+            selectedVariantSummary.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+    });
+});
+</script> 

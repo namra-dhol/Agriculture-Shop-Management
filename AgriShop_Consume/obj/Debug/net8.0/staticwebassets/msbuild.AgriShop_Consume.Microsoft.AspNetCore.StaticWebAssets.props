@@ -1,22 +1,22 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AgriShop_Consume.0408syg732.bundle.scp.css'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AgriShop_Consume.l78b749b6x.bundle.scp.css'))">
       <SourceType>Package</SourceType>
       <SourceId>AgriShop_Consume</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/AgriShop_Consume</BasePath>
-      <RelativePath>AgriShop_Consume.0408syg732.bundle.scp.css</RelativePath>
+      <RelativePath>AgriShop_Consume.l78b749b6x.bundle.scp.css</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>Reference</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName>ScopedCss</AssetTraitName>
       <AssetTraitValue>ProjectBundle</AssetTraitValue>
-      <Fingerprint>0408syg732</Fingerprint>
-      <Integrity>cCmjgM2Mt8HAiH0U4laMjGjvEDENB5IoU6gWJeZJncM=</Integrity>
+      <Fingerprint>l78b749b6x</Fingerprint>
+      <Integrity>UUUksIqpQA8vsDu0OU41riieSkU1+0w/kMlqiZoUnKA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AgriShop_Consume.0408syg732.bundle.scp.css'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AgriShop_Consume.l78b749b6x.bundle.scp.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))">
       <SourceType>Package</SourceType>

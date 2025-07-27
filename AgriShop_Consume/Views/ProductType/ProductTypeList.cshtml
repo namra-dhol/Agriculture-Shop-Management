@@ -1,0 +1,32 @@
+@model IEnumerable<AgriShop_Consume.Models.ProductTypeModel>
+
+@{
+    ViewData["Title"] = "Product Type List";
+}
+
+<h2>Product Type List</h2>
+<a class="btn btn-primary mb-2" asp-action="AddEdit">Add Product Type</a>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ProductTypeId</th>
+            <th>TypeName</th>
+            <th>UserId</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var productType in Model)
+        {
+            <tr>
+                <td>@productType.ProductTypeId</td>
+                <td>@productType.TypeName</td>
+                <td>@productType.UserId</td>
+                <td>
+                    <a class="btn btn-sm btn-warning" asp-action="AddEdit" asp-route-id="@productType.ProductTypeId">Edit</a>
+                    <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="@productType.ProductTypeId" onclick="return confirm('Are you sure?');">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table> 

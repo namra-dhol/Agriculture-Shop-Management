@@ -1,6 +1,5 @@
 /* _content/AgriShop_Consume/Views/Shared/_Layout.cshtml.rz.scp.css */
-/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
+/* Custom tweaks for responsive layout */
 
 a.navbar-brand[b-bf8awi7coc] {
   white-space: normal;
@@ -40,10 +39,25 @@ button.accept-policy[b-bf8awi7coc] {
   line-height: inherit;
 }
 
-.footer[b-bf8awi7coc] {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px;
+/* Responsive tweaks for header/footer */
+.bg-primary-custom[b-bf8awi7coc] {
+  background-color: #22c55e !important;
+}
+.text-primary-custom[b-bf8awi7coc] {
+  color: #22c55e !important;
+}
+
+@media (max-width: 767.98px) {
+  .footer .row > [class^="col-"][b-bf8awi7coc] {
+    margin-bottom: 1.5rem;
+  }
+  .navbar-nav[b-bf8awi7coc] {
+    gap: 0.5rem !important;
+  }
+  .navbar .navbar-collapse[b-bf8awi7coc] {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
 }

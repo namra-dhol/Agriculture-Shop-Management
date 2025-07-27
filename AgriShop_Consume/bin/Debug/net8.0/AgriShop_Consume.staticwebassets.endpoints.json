@@ -3,7 +3,7 @@
   "ManifestType": "Build",
   "Endpoints": [
     {
-      "Route": "AgriShop_Consume.0408syg732.styles.css",
+      "Route": "AgriShop_Consume.l78b749b6x.styles.css",
       "AssetFile": "AgriShop_Consume.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -17,7 +17,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1134"
+          "Value": "1400"
         },
         {
           "Name": "Content-Type",
@@ -25,21 +25,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"cCmjgM2Mt8HAiH0U4laMjGjvEDENB5IoU6gWJeZJncM=\""
+          "Value": "\"UUUksIqpQA8vsDu0OU41riieSkU1+0w/kMlqiZoUnKA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 10 Jul 2025 16:59:17 GMT"
+          "Value": "Thu, 24 Jul 2025 03:07:20 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "0408syg732"
+          "Value": "l78b749b6x"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-cCmjgM2Mt8HAiH0U4laMjGjvEDENB5IoU6gWJeZJncM="
+          "Value": "sha256-UUUksIqpQA8vsDu0OU41riieSkU1+0w/kMlqiZoUnKA="
         },
         {
           "Name": "label",
@@ -62,7 +62,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1134"
+          "Value": "1400"
         },
         {
           "Name": "Content-Type",
@@ -70,17 +70,17 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"cCmjgM2Mt8HAiH0U4laMjGjvEDENB5IoU6gWJeZJncM=\""
+          "Value": "\"UUUksIqpQA8vsDu0OU41riieSkU1+0w/kMlqiZoUnKA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 10 Jul 2025 16:59:17 GMT"
+          "Value": "Thu, 24 Jul 2025 03:07:20 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-cCmjgM2Mt8HAiH0U4laMjGjvEDENB5IoU6gWJeZJncM="
+          "Value": "sha256-UUUksIqpQA8vsDu0OU41riieSkU1+0w/kMlqiZoUnKA="
         }
       ]
     },

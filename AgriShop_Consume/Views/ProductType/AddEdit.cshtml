@@ -1,0 +1,26 @@
+@model AgriShop_Consume.Models.ProductTypeModel
+
+@{
+    ViewData["Title"] = Model.ProductTypeId > 0 ? "Edit Product Type" : "Add Product Type";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="AddEdit" method="post">
+    @if (Model.ProductTypeId > 0)
+    {
+        <input type="hidden" asp-for="ProductTypeId" />
+    }
+    <div class="mb-3">
+        <label asp-for="TypeName" class="form-label"></label>
+        <input asp-for="TypeName" class="form-control" />
+        <span asp-validation-for="TypeName" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="UserId" class="form-label"></label>
+        <input asp-for="UserId" class="form-control" />
+        <span asp-validation-for="UserId" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-success">Save</button>
+    <a asp-action="ProductTypeList" class="btn btn-secondary">Cancel</a>
+</form> 

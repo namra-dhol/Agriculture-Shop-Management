@@ -256,8 +256,8 @@
   },
   {
     "ContainingType": "AgriShop.Controllers.ProductController",
-    "Method": "GetProductsByTypeIncludingVariants",
-    "RelativePath": "api/Product/bytype/{productTypeId}",
+    "Method": "GetProductsByType",
+    "RelativePath": "api/Product/bytype-simple/{productTypeId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -268,7 +268,17 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[AgriShop.Models.Product, AgriShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "AgriShop.Controllers.ProductController",
@@ -380,6 +390,22 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "AgriShop.Controllers.ProductController",
+    "Method": "GetProductWithVariants",
+    "RelativePath": "api/Product/with-variants/{productId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "AgriShop.Controllers.ProductTypeController",

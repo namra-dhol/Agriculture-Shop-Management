@@ -138,5 +138,122 @@ public class ProductController : Controller
         return items;
     }
 
+    // New methods for product browsing functionality
+    public async Task<IActionResult> ProductsByType(int productTypeId)
+    {
+        List<ProductModel> products = new();
+        HttpResponseMessage response = await _httpClient.GetAsync($"Product/bytype-simple/{productTypeId}");
+
+        if (response.IsSuccessStatusCode)
+        {
+            var data = await response.Content.ReadAsStringAsync();
+            products = JsonSerializer.Deserialize<List<ProductModel>>(data, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+        }
+
+        // Get product type name for display
+        var productTypeResponse = await _httpClient.GetAsync($"ProductType/{productTypeId}");
+        string productTypeName = "Products";
+        if (productTypeResponse.IsSuccessStatusCode)
+        {
+            var typeData = await productTypeResponse.Content.ReadAsStringAsync();
+            var productType = JsonSerializer.Deserialize<ProductTypeModel>(typeData, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+            productTypeName = productType?.TypeName ?? "Products";
+        }
+
+        ViewBag.ProductTypeName = productTypeName;
+        ViewBag.ProductTypeId = productTypeId;
+
+        return View(products);
+    }
+
+    public async Task<IActionResult> ProductDetail(int productId)
+    {
+        ProductWithVariantsModel product = null;
+        var response = await _httpClient.GetAsync($"Product/with-variants/{productId}");
+
+        if (response.IsSuccessStatusCode)
+        {
+            var json = await response.Content.ReadAsStringAsync();
+            product = JsonSerializer.Deserialize<ProductWithVariantsModel>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+        }
+
+        if (product == null)
+            return NotFound();
+
+        return View(product);
+    }
+
+    // Default product type browsing (e.g., Fertilizers & Chemicals)
+    public async Task<IActionResult> DefaultProducts(int productTypeId = 1)
+    {
+        // You can change the default productTypeId parameter to match your desired category
+        // For example: DefaultProducts(2) for Seeds, DefaultProducts(3) for Tools, etc.
+        return await ProductsByType(productTypeId);
+    }
+
+    // Specific product type methods for easy navigation
+    public async Task<IActionResult> FertilizersAndChemicals()
+    {
+        // Change this ID to match your "Fertilizers & Chemicals" product type
+        return await GetProductsByTypeWithView(1);
+    }
+
+    public async Task<IActionResult> Seeds()
+    {
+        // Change this ID to match your "Seeds" product type
+        return await GetProductsByTypeWithView(2);
+    }
+
+    public async Task<IActionResult> FarmTools()
+    {
+        // Change this ID to match your "Farm Tools" product type
+        return await GetProductsByTypeWithView(3);
+    }
+
+    public async Task<IActionResult> Irrigation()
+    {
+        // Change this ID to match your "Irrigation" product type
+        return await GetProductsByTypeWithView(4);
+    }
+
+    public async Task<IActionResult> Pesticides()
+    {
+        // Change this ID to match your "Pesticides" product type
+        return await GetProductsByTypeWithView(5);
+    }
+
+    public async Task<IActionResult> GardenCare()
+    {
+        // Change this ID to match your "Garden Care" product type
+        return await GetProductsByTypeWithView(6);
+    }
+
+    // Helper method to get products by type and return the correct view
+    private async Task<IActionResult> GetProductsByTypeWithView(int productTypeId)
+    {
+        List<ProductModel> products = new();
+        HttpResponseMessage response = await _httpClient.GetAsync($"Product/bytype-simple/{productTypeId}");
+
+        if (response.IsSuccessStatusCode)
+        {
+            var data = await response.Content.ReadAsStringAsync();
+            products = JsonSerializer.Deserialize<List<ProductModel>>(data, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+        }
+
+        // Get product type name for display
+        var productTypeResponse = await _httpClient.GetAsync($"ProductType/{productTypeId}");
+        string productTypeName = "Products";
+        if (productTypeResponse.IsSuccessStatusCode)
+        {
+            var typeData = await productTypeResponse.Content.ReadAsStringAsync();
+            var productType = JsonSerializer.Deserialize<ProductTypeModel>(typeData, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+            productTypeName = productType?.TypeName ?? "Products";
+        }
+
+        ViewBag.ProductTypeName = productTypeName;
+        ViewBag.ProductTypeId = productTypeId;
+
+        return View("ProductsByType", products);
+    }
 }
 

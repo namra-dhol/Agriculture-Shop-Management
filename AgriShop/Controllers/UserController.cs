@@ -103,7 +103,8 @@ namespace AgriShop.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(500, $"An error occurred while updating the user: {ex.Message}");
+                return StatusCode(500, $"An" +
+                    $" error occurred while updating the user: {ex.Message}");
             }
         }
         #endregion
