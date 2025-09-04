@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "RyP8R9VfEEhSW0VNTdPVLeyrW9cuFsXNcO7Em6VFLJ4=",
+  "Hash": "Huv6k9GVqNypvbDgsKHR1gCJK4BsT2h83PhsbLbcpDg=",
   "Source": "AgriShop_Consume",
   "BasePath": "_content/AgriShop_Consume",
   "Mode": "Default",
@@ -59,6 +59,48 @@
       "OriginalItemSpec": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AgriShop_Consume.bundle.scp.css"
     },
     {
+      "Identity": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\css\\login.css",
+      "SourceId": "AgriShop_Consume",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\",
+      "BasePath": "_content/AgriShop_Consume",
+      "RelativePath": "css/login#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dvs30qn80z",
+      "Integrity": "FzNQsLEqha6qvpkS+LPygZAoYGTpP65ZcupKgZHZXM0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\login.css"
+    },
+    {
+      "Identity": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\css\\register.css",
+      "SourceId": "AgriShop_Consume",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\",
+      "BasePath": "_content/AgriShop_Consume",
+      "RelativePath": "css/register#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "7zwgzbjwhl",
+      "Integrity": "DbZylChTyJvxRoTxYy28Zljzj5zzWDtF8sW2SFXhMzg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\register.css"
+    },
+    {
       "Identity": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\css\\site.css",
       "SourceId": "AgriShop_Consume",
       "SourceType": "Discovered",
@@ -73,8 +115,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "c2tiyv64ts",
-      "Integrity": "pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=",
+      "Fingerprint": "fosamezn9b",
+      "Integrity": "r22M7xOahcMheWCkoVof2Nt7pQmj7mMSFKTei+SfmQ0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -1592,6 +1634,27 @@
       "OriginalItemSpec": "wwwroot\\uploads\\.gitkeep"
     },
     {
+      "Identity": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\uploads\\17d3af29-89ac-4d59-8914-3227a0615629.png",
+      "SourceId": "AgriShop_Consume",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\",
+      "BasePath": "_content/AgriShop_Consume",
+      "RelativePath": "uploads/17d3af29-89ac-4d59-8914-3227a0615629#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "45uy4wa79z",
+      "Integrity": "6M5sAdWfvbT4O+x6/+L5Pz7zeBfC1Agxb+FmcT1kzrk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\17d3af29-89ac-4d59-8914-3227a0615629.png"
+    },
+    {
       "Identity": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\uploads\\2b22cdee-11fe-41b0-abea-3b225bf666e9.jpg",
       "SourceId": "AgriShop_Consume",
       "SourceType": "Discovered",
@@ -1611,6 +1674,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\2b22cdee-11fe-41b0-abea-3b225bf666e9.jpg"
+    },
+    {
+      "Identity": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\uploads\\35982262-383f-4c73-a82b-c9fe3b374576.png",
+      "SourceId": "AgriShop_Consume",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\",
+      "BasePath": "_content/AgriShop_Consume",
+      "RelativePath": "uploads/35982262-383f-4c73-a82b-c9fe3b374576#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6x723vayh8",
+      "Integrity": "ZoxbXiouhzP+MHoM1vp05E/Uq4wRiqdvCrqG5IiQVPQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\35982262-383f-4c73-a82b-c9fe3b374576.png"
     },
     {
       "Identity": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\uploads\\49837149-cb51-4f39-b76a-7848b2283c34.jpg",
@@ -1695,6 +1779,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\75e54ae1-38ed-4c4c-9634-62d02825241d.jpg"
+    },
+    {
+      "Identity": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\uploads\\87f4ae9b-3bd4-4d29-9902-67f48ad651a6.jpg",
+      "SourceId": "AgriShop_Consume",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\",
+      "BasePath": "_content/AgriShop_Consume",
+      "RelativePath": "uploads/87f4ae9b-3bd4-4d29-9902-67f48ad651a6#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6h89s6ifdb",
+      "Integrity": "1hj+yMYI7c/wSvTqQUgfPAvQk2VhVZD5WNkH8OQmdSk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\87f4ae9b-3bd4-4d29-9902-67f48ad651a6.jpg"
     },
     {
       "Identity": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\uploads\\b3007cc2-fa8b-4267-b562-b5cebfea6aea.jpg",
@@ -1784,7 +1889,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Jul 2025 03:07:20 GMT"
+          "Value": "Fri, 22 Aug 2025 03:47:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1821,7 +1926,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Jul 2025 03:07:20 GMT"
+          "Value": "Fri, 22 Aug 2025 03:47:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1866,7 +1971,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Jul 2025 03:07:20 GMT"
+          "Value": "Fri, 22 Aug 2025 03:47:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1911,7 +2016,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Jul 2025 03:07:20 GMT"
+          "Value": "Fri, 22 Aug 2025 03:47:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1926,8 +2031,8 @@
       ]
     },
     {
-      "Route": "css/site.c2tiyv64ts.css",
-      "AssetFile": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\css\\site.css",
+      "Route": "css/login.css",
+      "AssetFile": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\css\\login.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1936,7 +2041,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "362"
+          "Value": "4813"
         },
         {
           "Name": "Content-Type",
@@ -1944,11 +2049,48 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=\""
+          "Value": "\"FzNQsLEqha6qvpkS+LPygZAoYGTpP65ZcupKgZHZXM0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 10 Jul 2025 16:41:17 GMT"
+          "Value": "Tue, 05 Aug 2025 07:08:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-FzNQsLEqha6qvpkS+LPygZAoYGTpP65ZcupKgZHZXM0="
+        }
+      ]
+    },
+    {
+      "Route": "css/login.dvs30qn80z.css",
+      "AssetFile": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\css\\login.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4813"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FzNQsLEqha6qvpkS+LPygZAoYGTpP65ZcupKgZHZXM0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 05 Aug 2025 07:08:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1958,15 +2100,97 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "c2tiyv64ts"
+          "Value": "dvs30qn80z"
         },
         {
           "Name": "label",
-          "Value": "css/site.css"
+          "Value": "css/login.css"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0="
+          "Value": "sha256-FzNQsLEqha6qvpkS+LPygZAoYGTpP65ZcupKgZHZXM0="
+        }
+      ]
+    },
+    {
+      "Route": "css/register.7zwgzbjwhl.css",
+      "AssetFile": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\css\\register.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "806"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DbZylChTyJvxRoTxYy28Zljzj5zzWDtF8sW2SFXhMzg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 05 Aug 2025 07:08:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7zwgzbjwhl"
+        },
+        {
+          "Name": "label",
+          "Value": "css/register.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DbZylChTyJvxRoTxYy28Zljzj5zzWDtF8sW2SFXhMzg="
+        }
+      ]
+    },
+    {
+      "Route": "css/register.css",
+      "AssetFile": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\css\\register.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "806"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DbZylChTyJvxRoTxYy28Zljzj5zzWDtF8sW2SFXhMzg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 05 Aug 2025 07:08:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DbZylChTyJvxRoTxYy28Zljzj5zzWDtF8sW2SFXhMzg="
         }
       ]
     },
@@ -1981,7 +2205,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "362"
+          "Value": "341"
         },
         {
           "Name": "Content-Type",
@@ -1989,11 +2213,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=\""
+          "Value": "\"r22M7xOahcMheWCkoVof2Nt7pQmj7mMSFKTei+SfmQ0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 10 Jul 2025 16:41:17 GMT"
+          "Value": "Thu, 07 Aug 2025 16:28:49 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2003,7 +2227,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0="
+          "Value": "sha256-r22M7xOahcMheWCkoVof2Nt7pQmj7mMSFKTei+SfmQ0="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.fosamezn9b.css",
+      "AssetFile": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "341"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"r22M7xOahcMheWCkoVof2Nt7pQmj7mMSFKTei+SfmQ0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 07 Aug 2025 16:28:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fosamezn9b"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-r22M7xOahcMheWCkoVof2Nt7pQmj7mMSFKTei+SfmQ0="
         }
       ]
     },
@@ -7912,6 +8181,88 @@
       ]
     },
     {
+      "Route": "uploads/17d3af29-89ac-4d59-8914-3227a0615629.45uy4wa79z.png",
+      "AssetFile": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\uploads\\17d3af29-89ac-4d59-8914-3227a0615629.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "160043"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6M5sAdWfvbT4O+x6/+L5Pz7zeBfC1Agxb+FmcT1kzrk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Jul 2025 07:33:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "45uy4wa79z"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/17d3af29-89ac-4d59-8914-3227a0615629.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6M5sAdWfvbT4O+x6/+L5Pz7zeBfC1Agxb+FmcT1kzrk="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/17d3af29-89ac-4d59-8914-3227a0615629.png",
+      "AssetFile": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\uploads\\17d3af29-89ac-4d59-8914-3227a0615629.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "160043"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6M5sAdWfvbT4O+x6/+L5Pz7zeBfC1Agxb+FmcT1kzrk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Jul 2025 07:33:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6M5sAdWfvbT4O+x6/+L5Pz7zeBfC1Agxb+FmcT1kzrk="
+        }
+      ]
+    },
+    {
       "Route": "uploads/2b22cdee-11fe-41b0-abea-3b225bf666e9.jpg",
       "AssetFile": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\uploads\\2b22cdee-11fe-41b0-abea-3b225bf666e9.jpg",
       "Selectors": [],
@@ -7990,6 +8341,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-x4JdklJrQK+u0eY2mKFrnNJT+SS99a/u2gZgvEXMXBc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/35982262-383f-4c73-a82b-c9fe3b374576.6x723vayh8.png",
+      "AssetFile": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\uploads\\35982262-383f-4c73-a82b-c9fe3b374576.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "200081"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZoxbXiouhzP+MHoM1vp05E/Uq4wRiqdvCrqG5IiQVPQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 02 Aug 2025 03:26:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6x723vayh8"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/35982262-383f-4c73-a82b-c9fe3b374576.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZoxbXiouhzP+MHoM1vp05E/Uq4wRiqdvCrqG5IiQVPQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/35982262-383f-4c73-a82b-c9fe3b374576.png",
+      "AssetFile": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\uploads\\35982262-383f-4c73-a82b-c9fe3b374576.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "200081"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZoxbXiouhzP+MHoM1vp05E/Uq4wRiqdvCrqG5IiQVPQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 02 Aug 2025 03:26:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZoxbXiouhzP+MHoM1vp05E/Uq4wRiqdvCrqG5IiQVPQ="
         }
       ]
     },
@@ -8318,6 +8751,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-Zb04LvzGxQhxb4IaWkMiczfhNIJz95PJTM2dWamsqUM="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/87f4ae9b-3bd4-4d29-9902-67f48ad651a6.6h89s6ifdb.jpg",
+      "AssetFile": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\uploads\\87f4ae9b-3bd4-4d29-9902-67f48ad651a6.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "155168"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1hj+yMYI7c/wSvTqQUgfPAvQk2VhVZD5WNkH8OQmdSk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Jul 2025 07:16:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6h89s6ifdb"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/87f4ae9b-3bd4-4d29-9902-67f48ad651a6.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1hj+yMYI7c/wSvTqQUgfPAvQk2VhVZD5WNkH8OQmdSk="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/87f4ae9b-3bd4-4d29-9902-67f48ad651a6.jpg",
+      "AssetFile": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\uploads\\87f4ae9b-3bd4-4d29-9902-67f48ad651a6.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "155168"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1hj+yMYI7c/wSvTqQUgfPAvQk2VhVZD5WNkH8OQmdSk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Jul 2025 07:16:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1hj+yMYI7c/wSvTqQUgfPAvQk2VhVZD5WNkH8OQmdSk="
         }
       ]
     },

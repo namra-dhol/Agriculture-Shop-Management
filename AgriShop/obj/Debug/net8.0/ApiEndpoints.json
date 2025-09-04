@@ -1,8 +1,40 @@
 [
   {
+    "ContainingType": "AgriShop.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "AgriShop.DTOs.LoginDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgriShop.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "AgriShop.DTOs.RegisterDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AgriShop.Controllers.ContactFormController",
     "Method": "GetContactForms",
-    "RelativePath": "api/ContactForm",
+    "RelativePath": "api/contactform",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -22,7 +54,7 @@
   {
     "ContainingType": "AgriShop.Controllers.ContactFormController",
     "Method": "InsertContactForm",
-    "RelativePath": "api/ContactForm",
+    "RelativePath": "api/contactform",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -38,7 +70,7 @@
   {
     "ContainingType": "AgriShop.Controllers.ContactFormController",
     "Method": "GetContactFormById",
-    "RelativePath": "api/ContactForm/{id}",
+    "RelativePath": "api/contactform/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -64,7 +96,7 @@
   {
     "ContainingType": "AgriShop.Controllers.ContactFormController",
     "Method": "UpdateContactForm",
-    "RelativePath": "api/ContactForm/{id}",
+    "RelativePath": "api/contactform/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -85,7 +117,7 @@
   {
     "ContainingType": "AgriShop.Controllers.ContactFormController",
     "Method": "DeleteContactForm",
-    "RelativePath": "api/ContactForm/{id}",
+    "RelativePath": "api/contactform/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -101,7 +133,7 @@
   {
     "ContainingType": "AgriShop.Controllers.ContactFormController",
     "Method": "FilterContactForms",
-    "RelativePath": "api/ContactForm/Filter",
+    "RelativePath": "api/contactform/filter",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -132,7 +164,7 @@
   {
     "ContainingType": "AgriShop.Controllers.ContactFormController",
     "Method": "GetTopNContactForms",
-    "RelativePath": "api/ContactForm/top",
+    "RelativePath": "api/contactform/top",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -158,7 +190,7 @@
   {
     "ContainingType": "AgriShop.Controllers.ProductController",
     "Method": "GetProducts",
-    "RelativePath": "api/Product",
+    "RelativePath": "api/product",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -178,7 +210,7 @@
   {
     "ContainingType": "AgriShop.Controllers.ProductController",
     "Method": "InsertProduct",
-    "RelativePath": "api/Product",
+    "RelativePath": "api/product",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -194,7 +226,7 @@
   {
     "ContainingType": "AgriShop.Controllers.ProductController",
     "Method": "GetProductById",
-    "RelativePath": "api/Product/{id}",
+    "RelativePath": "api/product/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -220,7 +252,7 @@
   {
     "ContainingType": "AgriShop.Controllers.ProductController",
     "Method": "DeleteProductlById",
-    "RelativePath": "api/Product/{id}",
+    "RelativePath": "api/product/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -235,8 +267,8 @@
   },
   {
     "ContainingType": "AgriShop.Controllers.ProductController",
-    "Method": "UpdateDoctor",
-    "RelativePath": "api/Product/{id}",
+    "Method": "UpdateProduct",
+    "RelativePath": "api/product/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -257,7 +289,7 @@
   {
     "ContainingType": "AgriShop.Controllers.ProductController",
     "Method": "GetProductsByType",
-    "RelativePath": "api/Product/bytype-simple/{productTypeId}",
+    "RelativePath": "api/product/bytype-simple/{productTypeId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -283,7 +315,7 @@
   {
     "ContainingType": "AgriShop.Controllers.ProductController",
     "Method": "GetProductTypes",
-    "RelativePath": "api/Product/dropdown/producttypes",
+    "RelativePath": "api/product/dropdown/producttypes",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -303,7 +335,7 @@
   {
     "ContainingType": "AgriShop.Controllers.ProductController",
     "Method": "GetSuppliers",
-    "RelativePath": "api/Product/dropdown/suppliers",
+    "RelativePath": "api/product/dropdown/suppliers",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -323,7 +355,7 @@
   {
     "ContainingType": "AgriShop.Controllers.ProductController",
     "Method": "GetUsers",
-    "RelativePath": "api/Product/dropdown/users",
+    "RelativePath": "api/product/dropdown/users",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -343,7 +375,7 @@
   {
     "ContainingType": "AgriShop.Controllers.ProductController",
     "Method": "FilterProduct",
-    "RelativePath": "api/Product/Filter",
+    "RelativePath": "api/product/filter",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -374,7 +406,7 @@
   {
     "ContainingType": "AgriShop.Controllers.ProductController",
     "Method": "GetTopNProducts",
-    "RelativePath": "api/Product/top n record",
+    "RelativePath": "api/product/top n record",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -394,7 +426,7 @@
   {
     "ContainingType": "AgriShop.Controllers.ProductController",
     "Method": "GetProductWithVariants",
-    "RelativePath": "api/Product/with-variants/{productId}",
+    "RelativePath": "api/product/with-variants/{productId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -410,7 +442,7 @@
   {
     "ContainingType": "AgriShop.Controllers.ProductTypeController",
     "Method": "GetProductTypes",
-    "RelativePath": "api/ProductType",
+    "RelativePath": "api/producttype",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -430,7 +462,7 @@
   {
     "ContainingType": "AgriShop.Controllers.ProductTypeController",
     "Method": "InsertProductType",
-    "RelativePath": "api/ProductType",
+    "RelativePath": "api/producttype",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -446,7 +478,7 @@
   {
     "ContainingType": "AgriShop.Controllers.ProductTypeController",
     "Method": "GetProductTypeById",
-    "RelativePath": "api/ProductType/{id}",
+    "RelativePath": "api/producttype/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -472,7 +504,7 @@
   {
     "ContainingType": "AgriShop.Controllers.ProductTypeController",
     "Method": "UpdateProductType",
-    "RelativePath": "api/ProductType/{id}",
+    "RelativePath": "api/producttype/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -493,7 +525,7 @@
   {
     "ContainingType": "AgriShop.Controllers.ProductTypeController",
     "Method": "DeleteProductType",
-    "RelativePath": "api/ProductType/{id}",
+    "RelativePath": "api/producttype/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -509,7 +541,7 @@
   {
     "ContainingType": "AgriShop.Controllers.ProductTypeController",
     "Method": "FilterProductType",
-    "RelativePath": "api/ProductType/Filter",
+    "RelativePath": "api/producttype/filter",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -535,7 +567,7 @@
   {
     "ContainingType": "AgriShop.Controllers.ProductTypeController",
     "Method": "GetTopNProductTypes",
-    "RelativePath": "api/ProductType/top",
+    "RelativePath": "api/producttype/top",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -561,7 +593,7 @@
   {
     "ContainingType": "AgriShop.Controllers.ProductVariantController",
     "Method": "GetProductVariants",
-    "RelativePath": "api/ProductVariant",
+    "RelativePath": "api/productvariant",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -581,7 +613,7 @@
   {
     "ContainingType": "AgriShop.Controllers.ProductVariantController",
     "Method": "InsertProductVariant",
-    "RelativePath": "api/ProductVariant",
+    "RelativePath": "api/productvariant",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -597,7 +629,7 @@
   {
     "ContainingType": "AgriShop.Controllers.ProductVariantController",
     "Method": "GetProductVariantById",
-    "RelativePath": "api/ProductVariant/{id}",
+    "RelativePath": "api/productvariant/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -623,7 +655,7 @@
   {
     "ContainingType": "AgriShop.Controllers.ProductVariantController",
     "Method": "UpdateProductVariant",
-    "RelativePath": "api/ProductVariant/{id}",
+    "RelativePath": "api/productvariant/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -644,7 +676,7 @@
   {
     "ContainingType": "AgriShop.Controllers.ProductVariantController",
     "Method": "DeleteProductVariant",
-    "RelativePath": "api/ProductVariant/{id}",
+    "RelativePath": "api/productvariant/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -660,7 +692,7 @@
   {
     "ContainingType": "AgriShop.Controllers.ProductVariantController",
     "Method": "FilterProductVariant",
-    "RelativePath": "api/ProductVariant/Filter",
+    "RelativePath": "api/productvariant/filter",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -691,7 +723,7 @@
   {
     "ContainingType": "AgriShop.Controllers.ProductVariantController",
     "Method": "GetTopNVariants",
-    "RelativePath": "api/ProductVariant/top",
+    "RelativePath": "api/productvariant/top",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -715,9 +747,35 @@
     ]
   },
   {
+    "ContainingType": "AgriShop.Controllers.QueryController",
+    "Method": "SendQuery",
+    "RelativePath": "api/query/send",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "queryDto",
+        "Type": "AgriShop.DTOs.QueryDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgriShop.Controllers.QueryController",
+    "Method": "Test",
+    "RelativePath": "api/query/test",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AgriShop.Controllers.SupplierController",
     "Method": "GetSuppliers",
-    "RelativePath": "api/Supplier",
+    "RelativePath": "api/supplier",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -737,7 +795,7 @@
   {
     "ContainingType": "AgriShop.Controllers.SupplierController",
     "Method": "InsertSupplier",
-    "RelativePath": "api/Supplier",
+    "RelativePath": "api/supplier",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -753,7 +811,7 @@
   {
     "ContainingType": "AgriShop.Controllers.SupplierController",
     "Method": "GetSupplierById",
-    "RelativePath": "api/Supplier/{id}",
+    "RelativePath": "api/supplier/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -779,7 +837,7 @@
   {
     "ContainingType": "AgriShop.Controllers.SupplierController",
     "Method": "UpdateSupplier",
-    "RelativePath": "api/Supplier/{id}",
+    "RelativePath": "api/supplier/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -800,7 +858,7 @@
   {
     "ContainingType": "AgriShop.Controllers.SupplierController",
     "Method": "DeleteSupplier",
-    "RelativePath": "api/Supplier/{id}",
+    "RelativePath": "api/supplier/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -816,7 +874,7 @@
   {
     "ContainingType": "AgriShop.Controllers.SupplierController",
     "Method": "FilterSuppliers",
-    "RelativePath": "api/Supplier/Filter",
+    "RelativePath": "api/supplier/filter",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -847,7 +905,7 @@
   {
     "ContainingType": "AgriShop.Controllers.SupplierController",
     "Method": "GetTopNSuppliers",
-    "RelativePath": "api/Supplier/top",
+    "RelativePath": "api/supplier/top",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -871,29 +929,70 @@
     ]
   },
   {
-    "ContainingType": "AgriShop.Controllers.UserController",
-    "Method": "GetUsers",
-    "RelativePath": "api/User",
+    "ContainingType": "AgriShop.Controllers.TestController",
+    "Method": "AdminEndpoint",
+    "RelativePath": "api/test/admin",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgriShop.Controllers.TestController",
+    "Method": "CustomerEndpoint",
+    "RelativePath": "api/test/customer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgriShop.Controllers.TestController",
+    "Method": "ProtectedEndpoint",
+    "RelativePath": "api/test/protected",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgriShop.Controllers.TestController",
+    "Method": "PublicEndpoint",
+    "RelativePath": "api/test/public",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgriShop.Controllers.UserController",
+    "Method": "GetUser",
+    "RelativePath": "api/user",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[AgriShop.Models.User, AgriShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
-    ]
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "AgriShop.Controllers.UserController",
     "Method": "InsertUser",
-    "RelativePath": "api/User",
+    "RelativePath": "api/user",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -909,7 +1008,7 @@
   {
     "ContainingType": "AgriShop.Controllers.UserController",
     "Method": "GetUserById",
-    "RelativePath": "api/User/{id}",
+    "RelativePath": "api/user/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -935,7 +1034,7 @@
   {
     "ContainingType": "AgriShop.Controllers.UserController",
     "Method": "UpdateUser",
-    "RelativePath": "api/User/{id}",
+    "RelativePath": "api/user/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -956,7 +1055,7 @@
   {
     "ContainingType": "AgriShop.Controllers.UserController",
     "Method": "DeleteUser",
-    "RelativePath": "api/User/{id}",
+    "RelativePath": "api/user/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -972,7 +1071,7 @@
   {
     "ContainingType": "AgriShop.Controllers.UserController",
     "Method": "FilterUsers",
-    "RelativePath": "api/User/Filter",
+    "RelativePath": "api/user/filter",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -1003,7 +1102,7 @@
   {
     "ContainingType": "AgriShop.Controllers.UserController",
     "Method": "GetTopNUsers",
-    "RelativePath": "api/User/top",
+    "RelativePath": "api/user/top",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

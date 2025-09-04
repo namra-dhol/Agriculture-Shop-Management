@@ -1,4 +1,5 @@
 using System;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace AgriShop_Consume.Models
 {
@@ -11,5 +12,8 @@ namespace AgriShop_Consume.Models
         public int? UserId { get; set; }
         public DateTime? CreatedAt { get; set; }
         public DateTime? ModifiedAt { get; set; }
+
+        // Dropdown list for products
+        public List<SelectListItem>? ProductList { get; set; }
     }
 } 

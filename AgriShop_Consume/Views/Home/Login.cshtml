@@ -1,0 +1,94 @@
+@{
+    ViewData["Title"] = "Login - AgriMart";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4">
+            <div class="card shadow">
+                <div class="card-header bg-primary-custom text-white text-center">
+                    <h4 class="mb-0">🌾 Login to AgriMart</h4>
+                </div>
+                <div class="card-body p-4">
+                    <div id="alertMessage"></div>
+                    
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" name="username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn bg-primary-custom text-white w-100 mb-3">
+                            <i class="bi bi-box-arrow-in-right"></i> Login
+                        </button>
+                    </form>
+                    
+                    <hr>
+                    <div class="text-center">
+                        <p class="mb-0">Don't have an account?</p>
+                        <a href="@Url.Action("Register", "Home")" class="btn btn-outline-primary-custom">
+                            <i class="bi bi-person-plus"></i> Register Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            $('#loginForm').on('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = {
+                    userName: $('#username').val(),
+                    password: $('#password').val()
+                };
+                
+                $.ajax({
+                    url: '/api/auth/login',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify(formData),
+                    success: function(response) {
+                        if (response.success) {
+                            // Store token in localStorage
+                            localStorage.setItem('authToken', response.token);
+                            localStorage.setItem('userInfo', JSON.stringify(response.user));
+                            
+                            showAlert('Login successful! Redirecting...', 'success');
+                            
+                            // Redirect to home page
+                            setTimeout(function() {
+                                window.location.href = '@Url.Action("Index", "Home")';
+                            }, 1500);
+                        } else {
+                            showAlert(response.message, 'danger');
+                        }
+                    },
+                    error: function(xhr) {
+                        let message = 'Login failed. Please try again.';
+                        if (xhr.responseJSON && xhr.responseJSON.message) {
+                            message = xhr.responseJSON.message;
+                        }
+                        showAlert(message, 'danger');
+                    }
+                });
+            });
+            
+            function showAlert(message, type) {
+                $('#alertMessage').html(`
+                    <div class="alert alert-${type} alert-dismissible fade show" role="alert">
+                        ${message}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                `);
+            }
+        });
+    </script>
+} 

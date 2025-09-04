@@ -20,3 +20,4 @@ public partial class ProductType
     [JsonIgnore]
     public virtual User? User { get; set; }
 }
+

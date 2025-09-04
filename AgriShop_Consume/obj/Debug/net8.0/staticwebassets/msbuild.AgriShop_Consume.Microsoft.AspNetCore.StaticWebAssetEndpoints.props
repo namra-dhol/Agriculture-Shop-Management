@@ -4,25 +4,49 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AgriShop_Consume.l78b749b6x.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-UUUksIqpQA8vsDu0OU41riieSkU1\u002B0w/kMlqiZoUnKA="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1400"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022UUUksIqpQA8vsDu0OU41riieSkU1\u002B0w/kMlqiZoUnKA=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Jul 2025 03:07:20 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1400"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022UUUksIqpQA8vsDu0OU41riieSkU1\u002B0w/kMlqiZoUnKA=\u0022"},{"Name":"Last-Modified","Value":"Fri, 22 Aug 2025 03:47:20 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/AgriShop_Consume/AgriShop_Consume.l78b749b6x.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AgriShop_Consume.l78b749b6x.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"l78b749b6x"},{"Name":"integrity","Value":"sha256-UUUksIqpQA8vsDu0OU41riieSkU1\u002B0w/kMlqiZoUnKA="},{"Name":"label","Value":"_content/AgriShop_Consume/AgriShop_Consume.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1400"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022UUUksIqpQA8vsDu0OU41riieSkU1\u002B0w/kMlqiZoUnKA=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Jul 2025 03:07:20 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1400"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022UUUksIqpQA8vsDu0OU41riieSkU1\u002B0w/kMlqiZoUnKA=\u0022"},{"Name":"Last-Modified","Value":"Fri, 22 Aug 2025 03:47:20 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/AgriShop_Consume/css/site.c2tiyv64ts.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/AgriShop_Consume/css/login.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\login.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"c2tiyv64ts"},{"Name":"integrity","Value":"sha256-pAGv4ietcJNk/EwsQZ5BN9\u002BK4MuNYS2a9wl4Jw\u002Bq9D0="},{"Name":"label","Value":"_content/AgriShop_Consume/css/site.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"362"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022pAGv4ietcJNk/EwsQZ5BN9\u002BK4MuNYS2a9wl4Jw\u002Bq9D0=\u0022"},{"Name":"Last-Modified","Value":"Thu, 10 Jul 2025 16:41:17 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-FzNQsLEqha6qvpkS\u002BLPygZAoYGTpP65ZcupKgZHZXM0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"4813"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022FzNQsLEqha6qvpkS\u002BLPygZAoYGTpP65ZcupKgZHZXM0=\u0022"},{"Name":"Last-Modified","Value":"Tue, 05 Aug 2025 07:08:47 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AgriShop_Consume/css/login.dvs30qn80z.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\login.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"dvs30qn80z"},{"Name":"integrity","Value":"sha256-FzNQsLEqha6qvpkS\u002BLPygZAoYGTpP65ZcupKgZHZXM0="},{"Name":"label","Value":"_content/AgriShop_Consume/css/login.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"4813"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022FzNQsLEqha6qvpkS\u002BLPygZAoYGTpP65ZcupKgZHZXM0=\u0022"},{"Name":"Last-Modified","Value":"Tue, 05 Aug 2025 07:08:47 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AgriShop_Consume/css/register.7zwgzbjwhl.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\register.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"7zwgzbjwhl"},{"Name":"integrity","Value":"sha256-DbZylChTyJvxRoTxYy28Zljzj5zzWDtF8sW2SFXhMzg="},{"Name":"label","Value":"_content/AgriShop_Consume/css/register.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"806"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022DbZylChTyJvxRoTxYy28Zljzj5zzWDtF8sW2SFXhMzg=\u0022"},{"Name":"Last-Modified","Value":"Tue, 05 Aug 2025 07:08:47 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AgriShop_Consume/css/register.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\register.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-DbZylChTyJvxRoTxYy28Zljzj5zzWDtF8sW2SFXhMzg="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"806"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022DbZylChTyJvxRoTxYy28Zljzj5zzWDtF8sW2SFXhMzg=\u0022"},{"Name":"Last-Modified","Value":"Tue, 05 Aug 2025 07:08:47 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/AgriShop_Consume/css/site.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-pAGv4ietcJNk/EwsQZ5BN9\u002BK4MuNYS2a9wl4Jw\u002Bq9D0="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"362"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022pAGv4ietcJNk/EwsQZ5BN9\u002BK4MuNYS2a9wl4Jw\u002Bq9D0=\u0022"},{"Name":"Last-Modified","Value":"Thu, 10 Jul 2025 16:41:17 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-r22M7xOahcMheWCkoVof2Nt7pQmj7mMSFKTei\u002BSfmQ0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"341"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022r22M7xOahcMheWCkoVof2Nt7pQmj7mMSFKTei\u002BSfmQ0=\u0022"},{"Name":"Last-Modified","Value":"Thu, 07 Aug 2025 16:28:49 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AgriShop_Consume/css/site.fosamezn9b.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"fosamezn9b"},{"Name":"integrity","Value":"sha256-r22M7xOahcMheWCkoVof2Nt7pQmj7mMSFKTei\u002BSfmQ0="},{"Name":"label","Value":"_content/AgriShop_Consume/css/site.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"341"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022r22M7xOahcMheWCkoVof2Nt7pQmj7mMSFKTei\u002BSfmQ0=\u0022"},{"Name":"Last-Modified","Value":"Thu, 07 Aug 2025 16:28:49 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/AgriShop_Consume/favicon.61n19gt1b8.ico">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</AssetFile>
@@ -888,6 +912,18 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-sknKkCdV2iNeG/SMOToX6kj3diEwC0YUF4oiGt8mK94="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"116"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022sknKkCdV2iNeG/SMOToX6kj3diEwC0YUF4oiGt8mK94=\u0022"},{"Name":"Last-Modified","Value":"Sun, 27 Jul 2025 09:10:05 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AgriShop_Consume/uploads/17d3af29-89ac-4d59-8914-3227a0615629.45uy4wa79z.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\17d3af29-89ac-4d59-8914-3227a0615629.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"45uy4wa79z"},{"Name":"integrity","Value":"sha256-6M5sAdWfvbT4O\u002Bx6/\u002BL5Pz7zeBfC1Agxb\u002BFmcT1kzrk="},{"Name":"label","Value":"_content/AgriShop_Consume/uploads/17d3af29-89ac-4d59-8914-3227a0615629.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"160043"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u00226M5sAdWfvbT4O\u002Bx6/\u002BL5Pz7zeBfC1Agxb\u002BFmcT1kzrk=\u0022"},{"Name":"Last-Modified","Value":"Tue, 29 Jul 2025 07:33:02 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AgriShop_Consume/uploads/17d3af29-89ac-4d59-8914-3227a0615629.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\17d3af29-89ac-4d59-8914-3227a0615629.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-6M5sAdWfvbT4O\u002Bx6/\u002BL5Pz7zeBfC1Agxb\u002BFmcT1kzrk="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"160043"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u00226M5sAdWfvbT4O\u002Bx6/\u002BL5Pz7zeBfC1Agxb\u002BFmcT1kzrk=\u0022"},{"Name":"Last-Modified","Value":"Tue, 29 Jul 2025 07:33:02 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/AgriShop_Consume/uploads/2b22cdee-11fe-41b0-abea-3b225bf666e9.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\2b22cdee-11fe-41b0-abea-3b225bf666e9.jpg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
@@ -899,6 +935,18 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"pwi6ogc3xz"},{"Name":"integrity","Value":"sha256-x4JdklJrQK\u002Bu0eY2mKFrnNJT\u002BSS99a/u2gZgvEXMXBc="},{"Name":"label","Value":"_content/AgriShop_Consume/uploads/2b22cdee-11fe-41b0-abea-3b225bf666e9.jpg"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"83227"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022x4JdklJrQK\u002Bu0eY2mKFrnNJT\u002BSS99a/u2gZgvEXMXBc=\u0022"},{"Name":"Last-Modified","Value":"Sun, 27 Jul 2025 09:40:04 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AgriShop_Consume/uploads/35982262-383f-4c73-a82b-c9fe3b374576.6x723vayh8.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\35982262-383f-4c73-a82b-c9fe3b374576.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"6x723vayh8"},{"Name":"integrity","Value":"sha256-ZoxbXiouhzP\u002BMHoM1vp05E/Uq4wRiqdvCrqG5IiQVPQ="},{"Name":"label","Value":"_content/AgriShop_Consume/uploads/35982262-383f-4c73-a82b-c9fe3b374576.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"200081"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022ZoxbXiouhzP\u002BMHoM1vp05E/Uq4wRiqdvCrqG5IiQVPQ=\u0022"},{"Name":"Last-Modified","Value":"Sat, 02 Aug 2025 03:26:44 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AgriShop_Consume/uploads/35982262-383f-4c73-a82b-c9fe3b374576.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\35982262-383f-4c73-a82b-c9fe3b374576.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-ZoxbXiouhzP\u002BMHoM1vp05E/Uq4wRiqdvCrqG5IiQVPQ="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"200081"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022ZoxbXiouhzP\u002BMHoM1vp05E/Uq4wRiqdvCrqG5IiQVPQ=\u0022"},{"Name":"Last-Modified","Value":"Sat, 02 Aug 2025 03:26:44 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/AgriShop_Consume/uploads/49837149-cb51-4f39-b76a-7848b2283c34.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\49837149-cb51-4f39-b76a-7848b2283c34.jpg'))</AssetFile>
@@ -947,6 +995,18 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"taalue0rfx"},{"Name":"integrity","Value":"sha256-Zb04LvzGxQhxb4IaWkMiczfhNIJz95PJTM2dWamsqUM="},{"Name":"label","Value":"_content/AgriShop_Consume/uploads/75e54ae1-38ed-4c4c-9634-62d02825241d.jpg"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"201826"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022Zb04LvzGxQhxb4IaWkMiczfhNIJz95PJTM2dWamsqUM=\u0022"},{"Name":"Last-Modified","Value":"Sun, 27 Jul 2025 09:40:48 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AgriShop_Consume/uploads/87f4ae9b-3bd4-4d29-9902-67f48ad651a6.6h89s6ifdb.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\87f4ae9b-3bd4-4d29-9902-67f48ad651a6.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"6h89s6ifdb"},{"Name":"integrity","Value":"sha256-1hj\u002ByMYI7c/wSvTqQUgfPAvQk2VhVZD5WNkH8OQmdSk="},{"Name":"label","Value":"_content/AgriShop_Consume/uploads/87f4ae9b-3bd4-4d29-9902-67f48ad651a6.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"155168"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00221hj\u002ByMYI7c/wSvTqQUgfPAvQk2VhVZD5WNkH8OQmdSk=\u0022"},{"Name":"Last-Modified","Value":"Tue, 29 Jul 2025 07:16:50 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AgriShop_Consume/uploads/87f4ae9b-3bd4-4d29-9902-67f48ad651a6.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\87f4ae9b-3bd4-4d29-9902-67f48ad651a6.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-1hj\u002ByMYI7c/wSvTqQUgfPAvQk2VhVZD5WNkH8OQmdSk="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"155168"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00221hj\u002ByMYI7c/wSvTqQUgfPAvQk2VhVZD5WNkH8OQmdSk=\u0022"},{"Name":"Last-Modified","Value":"Tue, 29 Jul 2025 07:16:50 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/AgriShop_Consume/uploads/b3007cc2-fa8b-4267-b562-b5cebfea6aea.11tu8u2vqi.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\b3007cc2-fa8b-4267-b562-b5cebfea6aea.jpg'))</AssetFile>

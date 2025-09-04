@@ -3,10 +3,12 @@ using Microsoft.EntityFrameworkCore;
 using AgriShop.Models;
 using System.Numerics;
 using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AgriShop.Controllers
 {
     [ApiController]
+  
     [Route("api/[controller]")]
     public class ProductController : ControllerBase
     {
@@ -61,6 +63,7 @@ namespace AgriShop.Controllers
 
         #region DeleteProductById
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
         public IActionResult DeleteProductlById(int id)
         {
             var product = context.Products.Find(id);
@@ -143,32 +146,7 @@ namespace AgriShop.Controllers
         #endregion
 
     
-        // #region GetProductsByType & Variants (using select)
-
-        // [HttpGet("bytype/{productTypeId}")]
-        // public async Task<ActionResult> GetProductsByTypeIncludingVariants(int productTypeId)
-        // {
-        //     var products = await context.Products
-        //         .Where(p => p.ProductTypeId == productTypeId)
-        //         .Select(p => new
-        //         {
-        //             p.ProductId,
-        //             p.ProductName,
-        //             p.ProductImg,
-        //             ProductVariants = p.ProductVariants.Select(v => new
-        //             {
-        //                 v.Size,
-        //                 v.Price
-        //             }).ToList()
-        //         })
-        //         .ToListAsync();
-
-        //     if (products == null || products.Count == 0)
-        //         return NotFound($"No products found for ProductTypeId = {productTypeId}");
-
-        //     return Ok(products);
-        // }
-        // #endregion
+      
 
         #region GetProductsByType (Simple)
         [HttpGet("bytype-simple/{productTypeId}")]

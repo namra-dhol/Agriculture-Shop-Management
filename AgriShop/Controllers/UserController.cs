@@ -2,11 +2,16 @@
 using Microsoft.EntityFrameworkCore;
 using AgriShop.Models;
 using FluentValidation;
+using Microsoft.AspNetCore.Authorization;
+using BCrypt.Net;
+using System.Security.Claims;
+
 
 namespace AgriShop.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    //[Authorize] // Require authentication for all endpoints
     public class UserController : ControllerBase
     {
         private readonly AgriShopContext context;
@@ -18,19 +23,63 @@ namespace AgriShop.Controllers
             this.validator = validator;
         }
 
-        #region GetAllUsers
+        /*#region GetAllUsers
         [HttpGet]
+        //[Authorize(Roles = "Admin")] // Only admins can see all users
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
             var users = await context.Users.ToListAsync();
             return Ok(users);
         }
+        #endregion*/
+
+        #region User List with Pagination
+
+        [HttpGet]
+        public async Task<IActionResult> GetUser(int pageNumber = 1, int pageSize = 5)
+        {
+            try
+            {
+                var totalRecords = await context.Users.CountAsync();
+
+                var users = await context.Users
+                    .OrderBy(u => u.UserId)   // Order by Id to maintain consistent paging
+                    .Skip((pageNumber - 1) * pageSize)
+                    .Take(pageSize)
+                    .ToListAsync();
+
+                var response = new
+                {
+                    TotalRecords = totalRecords,
+                    PageSize = pageSize,
+                    CurrentPage = pageNumber,
+                    TotalPages = (int)Math.Ceiling((double)totalRecords / pageSize),
+                    Users = users
+                };
+
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
         #endregion
 
         #region GetUserById
         [HttpGet("{id}")]
         public async Task<ActionResult<User>> GetUserById(int id)
         {
+            // Users can only see their own profile, admins can see any profile
+            var currentUserId = int.Parse(User.FindFirst("UserId")?.Value ?? "0");
+            var currentUserRole = User.FindFirst(ClaimTypes.Role)?.Value ?? "";
+
+            if (currentUserRole != "Admin" && currentUserId != id)
+            {
+                return Forbid();
+            }
+
             var user = await context.Users.FindAsync(id);
             if (user == null)
                 return NotFound();
@@ -41,6 +90,7 @@ namespace AgriShop.Controllers
 
         #region InsertUser
         [HttpPost]
+        //[Authorize(Roles = "Admin")] // Only admins can create users
         public async Task<IActionResult> InsertUser([FromBody] User user)
         {
             var validationResult = await validator.ValidateAsync(user);
@@ -54,7 +104,12 @@ namespace AgriShop.Controllers
             }
             try
             {
-                // You can hash the password here if needed
+                // Hash the password before saving
+                if (!string.IsNullOrEmpty(user.Password))
+                {
+                    user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
+                }
+
                 context.Users.Add(user);
                 await context.SaveChangesAsync();
                 return CreatedAtAction(nameof(GetUserById), new { id = user.UserId }, user);
@@ -70,6 +125,15 @@ namespace AgriShop.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateUser(int id, [FromBody] User user)
         {
+            // Users can only update their own profile, admins can update any profile
+            var currentUserId = int.Parse(User.FindFirst("UserId")?.Value ?? "0");
+            var currentUserRole = User.FindFirst(ClaimTypes.Role)?.Value ?? "";
+
+            if (currentUserRole != "Admin" && currentUserId != id)
+            {
+                return Forbid();
+            }
+
             if (id != user.UserId)
                 return BadRequest();
 
@@ -90,10 +154,20 @@ namespace AgriShop.Controllers
             // Update fields
             existingUser.UserName = user.UserName;
             existingUser.Email = user.Email;
-            existingUser.Password = user.Password;
             existingUser.Address = user.Address;
             existingUser.Phone = user.Phone;
-            existingUser.Role = user.Role;
+            
+            // Only admins can change roles
+            if (currentUserRole == "Admin")
+            {
+                existingUser.Role = user.Role;
+            }
+
+            // Hash password if it's being updated
+            if (!string.IsNullOrEmpty(user.Password) && user.Password != existingUser.Password)
+            {
+                existingUser.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
+            }
 
             try
             {
@@ -103,14 +177,14 @@ namespace AgriShop.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(500, $"An" +
-                    $" error occurred while updating the user: {ex.Message}");
+                return StatusCode(500, $"An error occurred while updating the user: {ex.Message}");
             }
         }
         #endregion
 
         #region DeleteUserById
         [HttpDelete("{id}")]
+        //[Authorize(Roles = "Admin")] // Only admins can delete users
         public IActionResult DeleteUser(int id)
         {
             var user = context.Users.Find(id);
@@ -125,6 +199,7 @@ namespace AgriShop.Controllers
 
         #region FilterUsers
         [HttpGet("Filter")]
+        //[Authorize(Roles = "Admin")] // Only admins can filter users
         public async Task<ActionResult<IEnumerable<User>>> FilterUsers(
             [FromQuery] string? userName,
             [FromQuery] string? role)
@@ -143,6 +218,7 @@ namespace AgriShop.Controllers
 
         #region GetTopNUsers
         [HttpGet("top")]
+        //[Authorize(Roles = "Admin")] // Only admins can get top users
         public async Task<ActionResult<IEnumerable<User>>> GetTopNUsers([FromQuery] int n = 2)
         {
             var users = await context.Users.Take(n).ToListAsync();

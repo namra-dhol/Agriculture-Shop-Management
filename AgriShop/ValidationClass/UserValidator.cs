@@ -17,8 +17,10 @@ namespace AgriShop.ValidationClass
                 .EmailAddress().WithMessage("Invalid email format.");
 
             RuleFor(u => u.Password)
-                .NotNull().WithMessage("Password must not be empty.")
-                .MinimumLength(6).WithMessage("Password must be at least 6 characters long.");
+           .NotEmpty().WithMessage("Password must not be empty.")
+           .MinimumLength(8).WithMessage("Password must be at least 8 characters long.")
+           .Matches(@"^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&\-+=()])(?=\S+$).{8,20}$")
+           .WithMessage("Password must be 8–20 characters and contain lowercase, uppercase, number, and special character.");
 
             RuleFor(u => u.Address)
                 .NotNull().WithMessage("Address must not be empty.")

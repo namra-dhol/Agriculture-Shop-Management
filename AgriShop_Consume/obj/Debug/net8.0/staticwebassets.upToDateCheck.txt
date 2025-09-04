@@ -1,3 +1,5 @@
+wwwroot\css\login.css
+wwwroot\css\register.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\Image\farming-tool-1.jpg
@@ -71,11 +73,14 @@ wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
 wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
 wwwroot\uploads\.gitkeep
+wwwroot\uploads\17d3af29-89ac-4d59-8914-3227a0615629.png
 wwwroot\uploads\2b22cdee-11fe-41b0-abea-3b225bf666e9.jpg
+wwwroot\uploads\35982262-383f-4c73-a82b-c9fe3b374576.png
 wwwroot\uploads\49837149-cb51-4f39-b76a-7848b2283c34.jpg
 wwwroot\uploads\4b093211-624b-4be4-b2c7-5e212ee9778c.jpg
 wwwroot\uploads\5d5c5564-8742-41b2-b6f3-9ec379403e9b.jpg
 wwwroot\uploads\75e54ae1-38ed-4c4c-9634-62d02825241d.jpg
+wwwroot\uploads\87f4ae9b-3bd4-4d29-9902-67f48ad651a6.jpg
 wwwroot\uploads\b3007cc2-fa8b-4267-b562-b5cebfea6aea.jpg
 wwwroot\uploads\cd6ff9c0-698d-450f-975f-c6038bd66f3e.png
 wwwroot\uploads\f8d3580a-620d-4491-8db1-a1752d38b64e.jpg

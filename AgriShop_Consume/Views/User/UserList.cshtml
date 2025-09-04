@@ -1,4 +1,4 @@
-﻿@model List<AgriShop_Consume.Models.UserModel>
+﻿@model PaginatedUserResponse
 
 @{
     ViewData["Title"] = "User List";
@@ -27,12 +27,13 @@
                 </tr>
             </thead>
             <tbody>
-                @if (Model != null && Model.Any())
+                @if (Model.Users != null && Model.Users.Any())
                 {
-                    foreach (var item in Model)
+                    int i = (Model.CurrentPage - 1) * Model.PageSize + 1;
+                    foreach (var item in Model.Users)
                     {
                         <tr>
-                            <td>@item.UserId</td>
+                            <td>@i</td>
                             <td>@item.UserName</td>
                             <td>@item.Email</td>
                             <td>@item.Phone</td>
@@ -54,6 +55,30 @@
                 }
             </tbody>
         </table>
+        <div class="d-flex justify-content-center mt-1 p-2">
+            @if (Model.CurrentPage > 1)
+            {
+                <a asp-action="UserList" asp-route-page="@(Model.CurrentPage - 1)" class="btn btn-outline-primary me-2">Previous</a>
+            }
+
+            @for (int i = 1; i <= Model.TotalPages; i++)
+            {
+                if (i == Model.CurrentPage)
+                {
+                    <span class="btn btn-primary me-1">@i</span>
+                }
+                else
+                {
+                    <a asp-action="UserList" asp-route-page="@i" class="btn btn-outline-primary me-1">@i</a>
+                }
+            }
+
+            @if (Model.CurrentPage < Model.TotalPages)
+            {
+                <a asp-action="UserList" asp-route-page="@(Model.CurrentPage + 1)" class="btn btn-outline-primary ms-2">Next</a>
+            }
+        </div>
     </div>
+
 
 </main>

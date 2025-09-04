@@ -5,16 +5,21 @@ using System.Net.Http.Headers;
 using System.Text.Json;
 using System.Text;
 using Newtonsoft.Json;
+using AgriShop_Consume.Helper;
+using System.Net.Http;
 
 public class ProductController : Controller
 {
     private readonly HttpClient _client;
+                        
     private readonly IWebHostEnvironment _webHostEnvironment;
 
     public ProductController(IHttpClientFactory httpClientFactory, IWebHostEnvironment webHostEnvironment)
     {
         _client = httpClientFactory.CreateClient();
         _client.BaseAddress = new Uri("http://localhost:5275/api/");
+        //_client = httpClientFactory.CreateClient("http://localhost:5275/api/");
+
         _webHostEnvironment = webHostEnvironment;
     }
 
@@ -127,6 +132,7 @@ public class ProductController : Controller
 
             // Return the relative path for the database
             return "/uploads/" + fileName;
+
         }
         catch (Exception ex)
         {
@@ -151,6 +157,8 @@ public class ProductController : Controller
 
     public async Task<IActionResult> Delete(int id)
     {
+        _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", TokenManager.Token);
+
         await _client.DeleteAsync($"Product/{id}");
         TempData["Message"] = "Product deleted successfully";
         return RedirectToAction("ProductList");

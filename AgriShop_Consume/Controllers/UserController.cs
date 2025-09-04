@@ -16,15 +16,36 @@ namespace AgriShop_Consume.Controllers
         }
 
         // List all users
-        public async Task<IActionResult> UserList()
-        {
-            var response = await _client.GetAsync("User");
-            var json = await response.Content.ReadAsStringAsync();
-            var list = JsonConvert.DeserializeObject<List<UserModel>>(json);
+        /*   public async Task<IActionResult> UserList()
+           {
 
-            return View(list);
+               var response = await _client.GetAsync("User");
+               var json = await response.Content.ReadAsStringAsync();
+               var list = JsonConvert.DeserializeObject<List<UserModel>>(json);
+
+               return View(list);
+           }*/
+
+        #region User List With Pagination
+
+        public async Task<IActionResult> UserList(int page = 1)
+        {
+
+            var response = await _client.GetAsync($"user?pageNumber={page}&pageSize=5");
+
+            if (!response.IsSuccessStatusCode)
+            {
+                return Unauthorized();
+            }
+
+            var json = await response.Content.ReadAsStringAsync();
+
+            var paginatedUsers = JsonConvert.DeserializeObject<PaginatedUserResponse>(json);
+
+            return View(paginatedUsers);
         }
 
+        #endregion
         // Delete user by ID
         public async Task<IActionResult> Delete(int id)
         {

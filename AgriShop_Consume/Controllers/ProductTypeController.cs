@@ -1,10 +1,13 @@
 using System.Text;
 using AgriShop_Consume.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
 namespace AgriShop_Consume.Controllers
 {
+    [Authorize("Admin")]
+
     public class ProductTypeController : Controller
     {
         private readonly HttpClient _client;

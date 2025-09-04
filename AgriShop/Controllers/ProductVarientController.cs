@@ -122,5 +122,6 @@ namespace AgriShop.Controllers
             return Ok(topVariants);
         }
         #endregion
+
     }
 }

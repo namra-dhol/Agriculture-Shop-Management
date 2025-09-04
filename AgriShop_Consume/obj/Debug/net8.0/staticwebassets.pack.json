@@ -53,6 +53,14 @@
       "PackagePath": "staticwebassets\\Image\\pestisides-4.jpg"
     },
     {
+      "Id": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
+      "Id": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\css\\register.css",
+      "PackagePath": "staticwebassets\\css\\register.css"
+    },
+    {
       "Id": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -297,8 +305,16 @@
       "PackagePath": "staticwebassets\\uploads\\.gitkeep"
     },
     {
+      "Id": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\uploads\\17d3af29-89ac-4d59-8914-3227a0615629.png",
+      "PackagePath": "staticwebassets\\uploads\\17d3af29-89ac-4d59-8914-3227a0615629.png"
+    },
+    {
       "Id": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\uploads\\2b22cdee-11fe-41b0-abea-3b225bf666e9.jpg",
       "PackagePath": "staticwebassets\\uploads\\2b22cdee-11fe-41b0-abea-3b225bf666e9.jpg"
+    },
+    {
+      "Id": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\uploads\\35982262-383f-4c73-a82b-c9fe3b374576.png",
+      "PackagePath": "staticwebassets\\uploads\\35982262-383f-4c73-a82b-c9fe3b374576.png"
     },
     {
       "Id": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\uploads\\49837149-cb51-4f39-b76a-7848b2283c34.jpg",
@@ -315,6 +331,10 @@
     {
       "Id": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\uploads\\75e54ae1-38ed-4c4c-9634-62d02825241d.jpg",
       "PackagePath": "staticwebassets\\uploads\\75e54ae1-38ed-4c4c-9634-62d02825241d.jpg"
+    },
+    {
+      "Id": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\uploads\\87f4ae9b-3bd4-4d29-9902-67f48ad651a6.jpg",
+      "PackagePath": "staticwebassets\\uploads\\87f4ae9b-3bd4-4d29-9902-67f48ad651a6.jpg"
     },
     {
       "Id": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\uploads\\b3007cc2-fa8b-4267-b562-b5cebfea6aea.jpg",
