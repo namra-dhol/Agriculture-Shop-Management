@@ -2,7 +2,12 @@
 using AgriShop_Consume.Models;
 using AgriShop_Consume.Helper;
 using System.Text.Json;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 
+[AllowAnonymous]
 public class LoginController : Controller
 {
     private readonly HttpClient _client;
@@ -37,13 +42,30 @@ public class LoginController : Controller
                 var result = await response.Content.ReadFromJsonAsync<LoginResponse>() ?? new LoginResponse();
                 TokenManager.Token = result.Token;
                 TokenManager.Role = result.Role;
-                TokenManager.Username = result.Username; // ✅ changed from Email to Username
+                TokenManager.Username = result.Username;
 
-              
-                    TempData["Success"] = "Successfully logged in as Admin!";
-                    return Redirect("/Home/Index");
-               
-                // You can redirect other roles too
+                // Create claims for cookie authentication
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name, result.Username ?? string.Empty),
+                    new Claim(ClaimTypes.Role, result.Role ?? string.Empty),
+                    new Claim("JwtToken", result.Token ?? string.Empty)
+                };
+
+                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                var authProperties = new AuthenticationProperties
+                {
+                    IsPersistent = true,
+                    ExpiresUtc = DateTimeOffset.UtcNow.AddHours(8)
+                };
+
+                await HttpContext.SignInAsync(
+                    CookieAuthenticationDefaults.AuthenticationScheme,
+                    new ClaimsPrincipal(claimsIdentity),
+                    authProperties);
+
+                TempData["Success"] = "Successfully logged in!";
+                return Redirect("/Home/Index");
             }
 
             TempData["Error"] = "Invalid username or password.";
@@ -55,5 +77,16 @@ public class LoginController : Controller
         }
 
         return View(model);
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Logout()
+    {
+        await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        TokenManager.Token = null;
+        TokenManager.Role = null;
+        TokenManager.Username = null;
+        return RedirectToAction("Index", "Login");
     }
 }

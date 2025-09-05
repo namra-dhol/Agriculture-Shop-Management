@@ -1,4 +1,4 @@
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace AgriShop_Consume.Models
 {
@@ -30,24 +30,35 @@ namespace AgriShop_Consume.Models
     public class RegisterViewModel
     {
         [Required]
-        public string Name { get; set; }
+        [Display(Name = "Username")]
+        public string Username { get; set; }  // ✅ Changed from Name to Username
 
         [Required, EmailAddress]
         public string Email { get; set; }
 
         [Required, MinLength(6)]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
 
-        [Required, Compare("Password", ErrorMessage = "Passwords do not match.")]
-        public string ConfirmPassword { get; set; }
+        [Required]
+        public string Address { get; set; }
+
+        [Required]
+        [Phone]
+        public string Phone { get; set; }
     }
 
     public class RegisterDTO
     {
-        public string Name { get; set; }
+        public string Username { get; set; }  // ✅ Changed from Name to Username to match API
         public string Email { get; set; }
         public string Password { get; set; }
+        public string Phone { get; set; }
+        public string Address { get; set; }   // ✅ Added Address field
     }
+
+
+
 
 
 }

@@ -90,7 +90,7 @@ namespace AgriShop.Controllers
 
         #region InsertUser
         [HttpPost]
-        //[Authorize(Roles = "Admin")] // Only admins can create users
+        [Authorize(Roles = "Admin")] // Only admins can create users
         public async Task<IActionResult> InsertUser([FromBody] User user)
         {
             var validationResult = await validator.ValidateAsync(user);

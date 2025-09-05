@@ -1,0 +1,95 @@
+@model AgriShop_Consume.Models.DashboardModel
+
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Dashboard</h2>
+
+    <div class="row g-3 mb-4">
+        <div class="col-md-3">
+            <div class="card text-bg-primary h-100">
+                <div class="card-body">
+                    <h6 class="card-title">Total Products</h6>
+                    <div class="display-6">@Model.TotalProducts</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-bg-success h-100">
+                <div class="card-body">
+                    <h6 class="card-title">Product Types</h6>
+                    <div class="display-6">@Model.TotalProductTypes</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-bg-warning h-100">
+                <div class="card-body">
+                    <h6 class="card-title">Suppliers</h6>
+                    <div class="display-6">@Model.TotalSuppliers</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-bg-danger h-100">
+                <div class="card-body">
+                    <h6 class="card-title">Users</h6>
+                    <div class="display-6">@Model.TotalUsers</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-3">
+        <div class="col-md-6">
+            <div class="card h-100">
+                <div class="card-header">Products By Type</div>
+                <div class="card-body">
+                    @if (Model.ProductsByType != null && Model.ProductsByType.Any())
+                    {
+                        <ul class="list-group">
+                            @foreach (var kv in Model.ProductsByType)
+                            {
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <span>@kv.Key</span>
+                                    <span class="badge bg-primary rounded-pill">@kv.Value</span>
+                                </li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <div class="text-muted">No data</div>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card h-100">
+                <div class="card-header">Top Variants per Product</div>
+                <div class="card-body">
+                    @if (Model.VariantsPerProduct != null && Model.VariantsPerProduct.Any())
+                    {
+                        <ul class="list-group">
+                            @foreach (var kv in Model.VariantsPerProduct)
+                            {
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <span>@kv.Key</span>
+                                    <span class="badge bg-secondary rounded-pill">@kv.Value</span>
+                                </li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <div class="text-muted">No data</div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -82,17 +82,38 @@
                     </div>
                     <div class="col-12 col-md-auto d-flex justify-content-center justify-content-md-end gap-2">
                         <div id="userSection">
-                            <!-- Fallback buttons in case JavaScript doesn't load -->
-                            <div class="d-flex gap-2" id="fallbackButtons">
-                                <a href="@Url.Action("Login", "Home")" class="btn btn-outline-secondary d-flex align-items-center gap-2 w-100 w-md-auto mb-2 mb-md-0">
-                                    <i class="bi bi-box-arrow-in-right"></i>
-                                    <span class="d-none d-md-inline">Login</span>
-                                </a>
-                                <a href="@Url.Action("Register", "Home")" class="btn btn-primary-custom d-flex align-items-center gap-2 w-100 w-md-auto mb-2 mb-md-0">
-                                    <i class="bi bi-person-plus"></i>
-                                    <span class="d-none d-md-inline">Register</span>
-                                </a>
-                            </div>
+                            <!-- Show based on cookie auth server-side (no JS dependency) -->
+                            @if (User?.Identity?.IsAuthenticated ?? false)
+                            {
+                                <div class="dropdown">
+                                    <button class="btn btn-outline-secondary dropdown-toggle d-flex align-items-center gap-2 w-100 w-md-auto mb-2 mb-md-0" type="button" data-bs-toggle="dropdown">
+                                        <i class="bi bi-person-circle"></i>
+                                        <span class="d-none d-md-inline">@User.Identity.Name</span>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li><span class="dropdown-item-text text-muted">Role: @User.FindFirst("http://schemas.microsoft.com/ws/2008/06/identity/claims/role")?.Value</span></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li>
+                                            <form asp-controller="Login" asp-action="Logout" method="post" class="px-3 py-1">
+                                                <button type="submit" class="btn btn-link dropdown-item"><i class="bi bi-box-arrow-right"></i> Logout</button>
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="d-flex gap-2" id="fallbackButtons">
+                                    <a asp-controller="Login" asp-action="Index" class="btn btn-outline-secondary d-flex align-items-center gap-2 w-100 w-md-auto mb-2 mb-md-0">
+                                        <i class="bi bi-box-arrow-in-right"></i>
+                                        <span class="d-none d-md-inline">Login</span>
+                                    </a>
+                                    <a asp-controller="Register" asp-action="Index" class="btn btn-primary-custom d-flex align-items-center gap-2 w-100 w-md-auto mb-2 mb-md-0">
+                                        <i class="bi bi-person-plus"></i>
+                                        <span class="d-none d-md-inline">Register</span>
+                                    </a>
+                                </div>
+                            }
                         </div>
                         <button class="btn btn-outline-secondary d-flex align-items-center gap-2 position-relative w-100 w-md-auto">
                             <i class="bi bi-cart"></i>
@@ -126,6 +147,9 @@
                             </li>
                             <li class="nav-item">
                                 <a asp-controller="ProductVariant" asp-action="ProductVariantList" class="nav-link">Product Variant</a>
+                            </li>
+                            <li class="nav-item">
+                                <a asp-controller="Dashboard" asp-action="Index" class="nav-link">Dashboard</a>
                             </li>
                         }
 
@@ -231,53 +255,7 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     
     <script>
-        // Handle user authentication state
-        $(document).ready(function() {
-            const token = localStorage.getItem('authToken');
-            const userInfo = localStorage.getItem('userInfo');
-            
-            if (token && userInfo) {
-                // User is logged in
-                const user = JSON.parse(userInfo);
-                $('#userSection').html(`
-                    <div class="dropdown">
-                        <button class="btn btn-outline-secondary dropdown-toggle d-flex align-items-center gap-2 w-100 w-md-auto mb-2 mb-md-0" type="button" data-bs-toggle="dropdown">
-                            <i class="bi bi-person-circle"></i>
-                            <span class="d-none d-md-inline">${user.userName}</span>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><span class="dropdown-item-text text-muted">Role: ${user.role}</span></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#" onclick="viewProfile()"><i class="bi bi-person"></i> Profile</a></li>
-                            <li><a class="dropdown-item" href="#" onclick="logout()"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
-                        </ul>
-                    </div>
-                `);
-            } else {
-                // User is not logged in - show login/register buttons
-                $('#userSection').html(`
-                    <div class="d-flex gap-2">
-                        <a href="@Url.Action("Login", "Home")" class="btn btn-outline-secondary d-flex align-items-center gap-2 w-100 w-md-auto mb-2 mb-md-0">
-                            <i class="bi bi-box-arrow-in-right"></i>
-                            <span class="d-none d-md-inline">Login</span>
-                        </a>
-                        <a href="@Url.Action("Register", "Home")" class="btn btn-primary-custom d-flex align-items-center gap-2 w-100 w-md-auto mb-2 mb-md-0">
-                            <i class="bi bi-person-plus"></i>
-                            <span class="d-none d-md-inline">Register</span>
-                        </a>
-                    </div>
-                `);
-            }
-        });
-        
-        function logout() {
-            localStorage.removeItem('authToken');
-            localStorage.removeItem('userInfo');
-            window.location.reload();
-        }
-        
         function viewProfile() {
-            // TODO: Implement profile view
             alert('Profile feature coming soon!');
         }
     </script>

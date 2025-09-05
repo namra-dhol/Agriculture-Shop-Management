@@ -2,9 +2,13 @@
 using AgriShop_Consume.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using AgriShop_Consume.Helper;
+using System.Net.Http.Headers;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AgriShop_Consume.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class UserController : Controller
     {
         private readonly HttpClient _client;
@@ -13,6 +17,14 @@ namespace AgriShop_Consume.Controllers
         {
             _client = httpClientFactory.CreateClient();
             _client.BaseAddress = new Uri("http://localhost:5275/api/"); 
+        }
+
+        private void SetBearerToken()
+        {
+            if (!string.IsNullOrWhiteSpace(TokenManager.Token))
+            {
+                _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", TokenManager.Token);
+            }
         }
 
         // List all users
@@ -30,7 +42,7 @@ namespace AgriShop_Consume.Controllers
 
         public async Task<IActionResult> UserList(int page = 1)
         {
-
+            SetBearerToken();
             var response = await _client.GetAsync($"user?pageNumber={page}&pageSize=5");
 
             if (!response.IsSuccessStatusCode)
@@ -49,6 +61,7 @@ namespace AgriShop_Consume.Controllers
         // Delete user by ID
         public async Task<IActionResult> Delete(int id)
         {
+            SetBearerToken();
             await _client.DeleteAsync($"User/{id}");
             return RedirectToAction("UserList");
         }
@@ -64,6 +77,7 @@ namespace AgriShop_Consume.Controllers
             }
             else
             {
+                SetBearerToken();
                 var response = await _client.GetAsync($"User/{id}");
                 if (!response.IsSuccessStatusCode)
                 {
@@ -87,6 +101,7 @@ namespace AgriShop_Consume.Controllers
             }
 
             var content = new StringContent(JsonConvert.SerializeObject(user), Encoding.UTF8, "application/json");
+            SetBearerToken();
 
             if (user.UserId > 0)
             {

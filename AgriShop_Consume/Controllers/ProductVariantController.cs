@@ -1,11 +1,15 @@
 using System.Text;
 using AgriShop_Consume.Models;
+using AgriShop_Consume.Helper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Authorization;
 using Newtonsoft.Json;
+using System.Net.Http.Headers;
 
 namespace AgriShop_Consume.Controllers
 {
+    [Authorize]
     public class ProductVariantController : Controller
     {
         private readonly HttpClient _client;
@@ -16,18 +20,69 @@ namespace AgriShop_Consume.Controllers
             _client.BaseAddress = new Uri("http://localhost:5275/api/");
         }
 
-        // List all product variants
-        public async Task<IActionResult> ProductVariantList()
+        private void SetBearerToken()
         {
-            var response = await _client.GetAsync("ProductVariant");
+            if (!string.IsNullOrWhiteSpace(TokenManager.Token))
+            {
+                _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", TokenManager.Token);
+            }
+        }
+
+        // List all product variants with optional filtering
+        public async Task<IActionResult> ProductVariantList(int? productId, string? size)
+        {
+            SetBearerToken();
+            
+            string endpoint = "ProductVariant";
+            var queryParams = new List<string>();
+            
+            if (productId.HasValue)
+            {
+                queryParams.Add($"productId={productId.Value}");
+            }
+            
+            if (!string.IsNullOrEmpty(size))
+            {
+                queryParams.Add($"size={Uri.EscapeDataString(size)}");
+            }
+            
+            if (queryParams.Any())
+            {
+                endpoint = $"ProductVariant/Filter?{string.Join("&", queryParams)}";
+            }
+            
+            var response = await _client.GetAsync(endpoint);
+            
+            if (!response.IsSuccessStatusCode)
+            {
+                // If filtering fails, fall back to getting all product variants
+                if (queryParams.Any())
+                {
+                    response = await _client.GetAsync("ProductVariant");
+                }
+                else
+                {
+                    return View(new List<ProductVariantModel>());
+                }
+            }
+            
             var json = await response.Content.ReadAsStringAsync();
-            var list = JsonConvert.DeserializeObject<List<ProductVariantModel>>(json);
+            var list = JsonConvert.DeserializeObject<List<ProductVariantModel>>(json) ?? new List<ProductVariantModel>();
+            
+            // Pass the search parameters to the view for maintaining the search inputs
+            ViewBag.ProductId = productId;
+            ViewBag.Size = size;
+            
+            // Get products for dropdown
+            ViewBag.ProductList = await GetDropdown("Product");
+            
             return View(list);
         }
 
         // Delete product variant by ID
         public async Task<IActionResult> Delete(int id)
         {
+            SetBearerToken();
             await _client.DeleteAsync($"ProductVariant/{id}");
             return RedirectToAction("ProductVariantList");
         }
@@ -42,6 +97,7 @@ namespace AgriShop_Consume.Controllers
             }
             else
             {
+                SetBearerToken();
                 var response = await _client.GetAsync($"ProductVariant/{id}");
                 if (!response.IsSuccessStatusCode)
                 {
@@ -65,6 +121,7 @@ namespace AgriShop_Consume.Controllers
                 await PopulateDropdowns(productVariant);
                 return View(productVariant);
             }
+            SetBearerToken();
             var content = new StringContent(JsonConvert.SerializeObject(productVariant), Encoding.UTF8, "application/json");
             if (productVariant.VariantId > 0)
             {
@@ -82,6 +139,7 @@ namespace AgriShop_Consume.Controllers
         // Helper for dropdowns
         private async Task PopulateDropdowns(ProductVariantModel model)
         {
+            SetBearerToken();
             model.ProductList = await GetDropdown("Product");
         }
 
@@ -91,6 +149,7 @@ namespace AgriShop_Consume.Controllers
 
             try
             {
+                SetBearerToken();
                 // Call the main Product API directly instead of the dropdown endpoint
                 var response = await _client.GetAsync("Product");
                 if (response.IsSuccessStatusCode)

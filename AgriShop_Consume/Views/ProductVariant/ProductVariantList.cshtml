@@ -258,29 +258,101 @@
                         <p class="text-muted mb-0">Manage product variants, sizes, and pricing</p>
                     </div>
                     <div class="d-flex gap-3 align-items-center flex-wrap">
-                        <!-- Search Bar -->
-                        <div class="search-container">
-                            <i class="bi bi-search search-icon"></i>
-                            <input type="text" id="searchInput" class="form-control search-input"
-                                   placeholder="Search variants..."
-                                   onkeyup="filterVariants()">
-                        </div>
                         <a class="btn btn-primary-custom btn-lg px-4" href="@Url.Action("AddEdit", "ProductVariant")">
                             <i class="bi bi-plus-circle me-2"></i>Add Variant
                         </a>
                     </div>
                 </div>
 
+                <!-- Filter Form -->
+                <div class="card mb-4">
+                    <div class="card-header card-header-custom">
+                        <h5 class="mb-0"><i class="bi bi-funnel me-2"></i>Filter Product Variants</h5>
+                    </div>
+                    <div class="card-body">
+                        <form method="get" asp-action="ProductVariantList" class="row g-3">
+                            <div class="col-md-4">
+                                <label for="productId" class="form-label">Product</label>
+                                <select class="form-select" name="productId" id="productId">
+                                    <option value="">All Products</option>
+                                    @if (ViewBag.ProductList != null)
+                                    {
+                                        @foreach (var product in ViewBag.ProductList)
+                                        {
+                                            <option value="@product.Value" selected="@(ViewBag.ProductId?.ToString() == product.Value)">@product.Text</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="size" class="form-label">Size</label>
+                                <input type="text" 
+                                       class="form-control" 
+                                       name="size" 
+                                       id="size"
+                                       value="@ViewBag.Size" 
+                                       placeholder="Enter size (e.g., Small, Medium, Large)">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">&nbsp;</label>
+                                <div class="d-flex gap-2">
+                                    <button type="submit" class="btn btn-primary-custom">
+                                        <i class="bi bi-search me-2"></i>Filter
+                                    </button>
+                                    @if (ViewBag.ProductId != null || !string.IsNullOrEmpty(ViewBag.Size))
+                                    {
+                                        <a asp-action="ProductVariantList" class="btn btn-outline-secondary">
+                                            <i class="bi bi-x-circle me-2"></i>Clear
+                                        </a>
+                                    }
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Results Info -->
+                @if (ViewBag.ProductId != null || !string.IsNullOrEmpty(ViewBag.Size))
+                {
+                    <div class="alert alert-info">
+                        <i class="bi bi-info-circle"></i> 
+                        Showing filtered results
+                        @if (ViewBag.ProductId != null)
+                        {
+                            <span class="ms-2">for Product ID: <strong>@ViewBag.ProductId</strong></span>
+                        }
+                        @if (!string.IsNullOrEmpty(ViewBag.Size))
+                        {
+                            <span class="ms-2">with Size: <strong>"@ViewBag.Size"</strong></span>
+                        }
+                        @if (Model.Any())
+                        {
+                            <span class="ms-2">(@Model.Count() result(s) found)</span>
+                        }
+                    </div>
+                }
+
                 <!-- No Data Message -->
                 @if (Model == null || !Model.Any())
                 {
                     <div class="no-data-container">
                         <i class="bi bi-inbox no-data-icon"></i>
-                        <h4 class="text-muted mb-2">No Product Variants Found</h4>
-                        <p class="text-muted mb-3">Start by adding your first product variant to manage different sizes and pricing options.</p>
-                        <a class="btn btn-primary-custom" href="@Url.Action("AddEdit", "ProductVariant")">
-                            <i class="bi bi-plus-circle me-2"></i>Add First Variant
-                        </a>
+                        @if (ViewBag.ProductId != null || !string.IsNullOrEmpty(ViewBag.Size))
+                        {
+                            <h4 class="text-muted mb-2">No Variants Match Your Filter</h4>
+                            <p class="text-muted mb-3">No product variants match your current filter criteria. Try adjusting your search parameters.</p>
+                            <a asp-action="ProductVariantList" class="btn btn-primary-custom">
+                                <i class="bi bi-arrow-left me-2"></i>View All Variants
+                            </a>
+                        }
+                        else
+                        {
+                            <h4 class="text-muted mb-2">No Product Variants Found</h4>
+                            <p class="text-muted mb-3">Start by adding your first product variant to manage different sizes and pricing options.</p>
+                            <a class="btn btn-primary-custom" href="@Url.Action("AddEdit", "ProductVariant")">
+                                <i class="bi bi-plus-circle me-2"></i>Add First Variant
+                            </a>
+                        }
                     </div>
                 }
                 else
@@ -464,28 +536,16 @@
                 : '<i class="bi bi-grid me-2"></i>Switch to Card View';
         }
 
-        function filterVariants() {
-            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-            const variantItems = document.querySelectorAll('.variant-item');
-
-            variantItems.forEach(item => {
-                const productId = item.getAttribute('data-productid');
-                const size = item.getAttribute('data-size') || '';
-                const userId = item.getAttribute('data-userid');
-
-                const matches = productId.includes(searchTerm) ||
-                               size.includes(searchTerm) ||
-                               userId.includes(searchTerm);
-
-                item.style.display = matches ? '' : 'none';
-            });
-        }
-
-        // Initialize search functionality
+        // Auto-submit form when product dropdown changes
         document.addEventListener('DOMContentLoaded', function() {
-            const searchInput = document.getElementById('searchInput');
-            if (searchInput) {
-                searchInput.addEventListener('input', filterVariants);
+            const productSelect = document.getElementById('productId');
+            if (productSelect) {
+                productSelect.addEventListener('change', function() {
+                    // Auto-submit form when product is selected
+                    if (this.value) {
+                        this.form.submit();
+                    }
+                });
             }
         });
     </script>

@@ -7,24 +7,36 @@ using System.Text;
 using Newtonsoft.Json;
 using AgriShop_Consume.Helper;
 using System.Net.Http;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
+[Authorize]
 public class ProductController : Controller
 {
     private readonly HttpClient _client;
-                        
+
     private readonly IWebHostEnvironment _webHostEnvironment;
 
     public ProductController(IHttpClientFactory httpClientFactory, IWebHostEnvironment webHostEnvironment)
     {
         _client = httpClientFactory.CreateClient();
         _client.BaseAddress = new Uri("http://localhost:5275/api/");
-        //_client = httpClientFactory.CreateClient("http://localhost:5275/api/");
+        // _client = httpClientFactory.CreateClient("http://localhost:5275/api/");
 
         _webHostEnvironment = webHostEnvironment;
     }
 
+    private void SetBearerToken()
+    {
+        if (!string.IsNullOrWhiteSpace(TokenManager.Token))
+        {
+            _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", TokenManager.Token);
+        }
+    }
+
     public async Task<IActionResult> ProductList()
     {
+        SetBearerToken();
         var response = await _client.GetAsync("Product");
         var json = await response.Content.ReadAsStringAsync();
         var products = JsonConvert.DeserializeObject<List<ProductModel>>(json);
@@ -33,6 +45,7 @@ public class ProductController : Controller
 
     public async Task<IActionResult> ProductAdd()
     {
+        SetBearerToken();
         var product = new ProductModel();
         await PopulateDropdowns(product);
         return View("ProductForm", product);
@@ -55,6 +68,7 @@ public class ProductController : Controller
 
         try
         {
+            SetBearerToken();
             // Handle image upload or selection
             if (productImage != null && productImage.Length > 0)
             {
@@ -142,6 +156,7 @@ public class ProductController : Controller
 
     public async Task<IActionResult> Edit(int id)
     {
+        SetBearerToken();
         var response = await _client.GetAsync($"Product/{id}");
         if (!response.IsSuccessStatusCode)
         {
@@ -155,10 +170,10 @@ public class ProductController : Controller
         return View("ProductForm", product);
     }
 
+    [Authorize]
     public async Task<IActionResult> Delete(int id)
     {
-        _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", TokenManager.Token);
-
+        SetBearerToken();
         await _client.DeleteAsync($"Product/{id}");
         TempData["Message"] = "Product deleted successfully";
         return RedirectToAction("ProductList");
@@ -167,6 +182,7 @@ public class ProductController : Controller
     // Helper for dropdowns
     private async Task PopulateDropdowns(ProductModel model)
     {
+        SetBearerToken();
         model.ProductTypeList = await GetDropdown("product/dropdown/producttypes");
         model.SupplierList = await GetDropdown("product/dropdown/suppliers");
         model.UserList = await GetDropdown("product/dropdown/users");
@@ -175,7 +191,7 @@ public class ProductController : Controller
     private async Task<List<SelectListItem>> GetDropdown(string endpoint)
     {
         List<SelectListItem> items = new();
-
+        SetBearerToken();
         var response = await _client.GetAsync(endpoint);
         if (response.IsSuccessStatusCode)
         {
@@ -198,6 +214,7 @@ public class ProductController : Controller
     // New methods for product browsing functionality
     public async Task<IActionResult> ProductsByType(int productTypeId)
     {
+        SetBearerToken();
         var response = await _client.GetAsync($"Product/bytype-simple/{productTypeId}");
         var json = await response.Content.ReadAsStringAsync();
         var products = JsonConvert.DeserializeObject<List<ProductModel>>(json);
@@ -220,6 +237,7 @@ public class ProductController : Controller
 
     public async Task<IActionResult> ProductDetail(int productId)
     {
+        SetBearerToken();
         var response = await _client.GetAsync($"Product/with-variants/{productId}");
         if (!response.IsSuccessStatusCode)
         {
@@ -280,11 +298,13 @@ public class ProductController : Controller
     // Helper method to get products by type and return the correct view
     private async Task<IActionResult> GetProductsByTypeWithView(int productTypeId)
     {
+        SetBearerToken();
         var response = await _client.GetAsync($"Product/bytype-simple/{productTypeId}");
         var json = await response.Content.ReadAsStringAsync();
         var products = JsonConvert.DeserializeObject<List<ProductModel>>(json);
 
         // Get product type name for display
+        SetBearerToken();
         var productTypeResponse = await _client.GetAsync($"ProductType/{productTypeId}");
         string productTypeName = "Products";
         if (productTypeResponse.IsSuccessStatusCode)
@@ -300,4 +320,3 @@ public class ProductController : Controller
         return View("ProductsByType", products);
     }
 }
-

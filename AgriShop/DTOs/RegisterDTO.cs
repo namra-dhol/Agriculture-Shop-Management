@@ -7,8 +7,18 @@ namespace AgriShop.DTOs
         [Required]
         public string Username { get; set; }
 
-        [Required]
-        [MinLength(6)]
+        [Required, MinLength(6)]
         public string Password { get; set; }
+
+        [EmailAddress]
+        public string? Email { get; set; }
+
+        [Phone]
+        public string? Phone { get; set; }
+
+        [Required]
+        public string Address { get; set; } // ✅ add this
     }
+
+
 }

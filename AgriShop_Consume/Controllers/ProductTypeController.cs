@@ -1,13 +1,17 @@
+using System.Data;
 using System.Text;
 using AgriShop_Consume.Models;
+using AgriShop_Consume.Helper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System.Net.Http.Headers;
 
 namespace AgriShop_Consume.Controllers
 {
-    [Authorize("Admin")]
+  
 
+    [Authorize]
     public class ProductTypeController : Controller
     {
         private readonly HttpClient _client;
@@ -18,18 +22,53 @@ namespace AgriShop_Consume.Controllers
             _client.BaseAddress = new Uri("http://localhost:5275/api/");
         }
 
-        // List all product types
-        public async Task<IActionResult> ProductTypeList()
+        private void SetBearerToken()
         {
-            var response = await _client.GetAsync("ProductType");
+            if (!string.IsNullOrWhiteSpace(TokenManager.Token))
+            {
+                _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", TokenManager.Token);
+            }
+        }
+
+        // List all product types with optional filtering
+        public async Task<IActionResult> ProductTypeList(string? typeName)
+        {
+            SetBearerToken();
+            
+            string endpoint = "ProductType";
+            if (!string.IsNullOrEmpty(typeName))
+            {
+                endpoint = $"ProductType/Filter?typeName={Uri.EscapeDataString(typeName)}";
+            }
+            
+            var response = await _client.GetAsync(endpoint);
+            
+            if (!response.IsSuccessStatusCode)
+            {
+                // If filtering fails, fall back to getting all product types
+                if (!string.IsNullOrEmpty(typeName))
+                {
+                    response = await _client.GetAsync("ProductType");
+                }
+                else
+                {
+                    return View(new List<ProductTypeModel>());
+                }
+            }
+            
             var json = await response.Content.ReadAsStringAsync();
-            var list = JsonConvert.DeserializeObject<List<ProductTypeModel>>(json);
+            var list = JsonConvert.DeserializeObject<List<ProductTypeModel>>(json) ?? new List<ProductTypeModel>();
+            
+            // Pass the search term to the view for maintaining the search input
+            ViewBag.SearchTerm = typeName;
+            
             return View(list);
         }
 
         // Delete product type by ID
         public async Task<IActionResult> Delete(int id)
         {
+            SetBearerToken();
             await _client.DeleteAsync($"ProductType/{id}");
             return RedirectToAction("ProductTypeList");
         }
@@ -44,6 +83,7 @@ namespace AgriShop_Consume.Controllers
             }
             else
             {
+                SetBearerToken();
                 var response = await _client.GetAsync($"ProductType/{id}");
                 if (!response.IsSuccessStatusCode)
                 {
@@ -62,6 +102,7 @@ namespace AgriShop_Consume.Controllers
             {
                 return View(productType);
             }
+            SetBearerToken();
             var content = new StringContent(JsonConvert.SerializeObject(productType), Encoding.UTF8, "application/json");
             if (productType.ProductTypeId > 0)
             {
