@@ -317,12 +317,20 @@
       "PackagePath": "staticwebassets\\uploads\\35982262-383f-4c73-a82b-c9fe3b374576.png"
     },
     {
+      "Id": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\uploads\\35d09936-a1b8-4bdc-85c6-711658b0ff20.png",
+      "PackagePath": "staticwebassets\\uploads\\35d09936-a1b8-4bdc-85c6-711658b0ff20.png"
+    },
+    {
       "Id": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\uploads\\49837149-cb51-4f39-b76a-7848b2283c34.jpg",
       "PackagePath": "staticwebassets\\uploads\\49837149-cb51-4f39-b76a-7848b2283c34.jpg"
     },
     {
       "Id": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\uploads\\4b093211-624b-4be4-b2c7-5e212ee9778c.jpg",
       "PackagePath": "staticwebassets\\uploads\\4b093211-624b-4be4-b2c7-5e212ee9778c.jpg"
+    },
+    {
+      "Id": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\uploads\\4ee7b90d-d6cc-4eea-b035-f0b27a131754.png",
+      "PackagePath": "staticwebassets\\uploads\\4ee7b90d-d6cc-4eea-b035-f0b27a131754.png"
     },
     {
       "Id": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\uploads\\5d5c5564-8742-41b2-b6f3-9ec379403e9b.jpg",
@@ -345,8 +353,20 @@
       "PackagePath": "staticwebassets\\uploads\\cd6ff9c0-698d-450f-975f-c6038bd66f3e.png"
     },
     {
+      "Id": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\uploads\\d8c8e188-3b6f-454e-bf28-77435cd9c308.png",
+      "PackagePath": "staticwebassets\\uploads\\d8c8e188-3b6f-454e-bf28-77435cd9c308.png"
+    },
+    {
+      "Id": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\uploads\\f854ed0e-2e3a-471c-8bb8-57da1ea49645.png",
+      "PackagePath": "staticwebassets\\uploads\\f854ed0e-2e3a-471c-8bb8-57da1ea49645.png"
+    },
+    {
       "Id": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\uploads\\f8d3580a-620d-4491-8db1-a1752d38b64e.jpg",
       "PackagePath": "staticwebassets\\uploads\\f8d3580a-620d-4491-8db1-a1752d38b64e.jpg"
+    },
+    {
+      "Id": "D:\\Agriculture-Shop-Management\\AgriShop_Consume\\wwwroot\\uploads\\ffd14643-85ce-4f46-ae6a-4e47f23bf912.png",
+      "PackagePath": "staticwebassets\\uploads\\ffd14643-85ce-4f46-ae6a-4e47f23bf912.png"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AgriShop_Consume.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

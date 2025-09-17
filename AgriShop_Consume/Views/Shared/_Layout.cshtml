@@ -115,11 +115,11 @@
                                 </div>
                             }
                         </div>
-                        <button class="btn btn-outline-secondary d-flex align-items-center gap-2 position-relative w-100 w-md-auto">
+                       @*  <button class="btn btn-outline-secondary d-flex align-items-center gap-2 position-relative w-100 w-md-auto">
                             <i class="bi bi-cart"></i>
                             <span class="d-none d-md-inline">Cart</span>
                             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
-                        </button>
+                        </button> *@
                     </div>
                 </div>
             </div>
@@ -153,16 +153,20 @@
                             </li>
                         }
 
-                        <li class="nav-item"><a asp-controller="Product" asp-action="FertilizersAndChemicals" class="nav-link">Fertilizers & Chemicals</a></li>
+                        <li class="nav-item">
+                            <a asp-controller="Product" asp-action="FertilizersAndChemicals" class="nav-link">
+                                Fertilizers & Chemicals
+                            </a>
+                        </li>
                         <li class="nav-item"><a asp-controller="Product" asp-action="FarmTools" class="nav-link">Farm Tools & Equipment</a></li>
                         <li class="nav-item"><a asp-controller="Product" asp-action="Irrigation" class="nav-link">Irrigation</a></li>
                         <li class="nav-item"><a asp-controller="Product" asp-action="Pesticides" class="nav-link">Pesticides</a></li>
                         <li class="nav-item"><a asp-controller="Product" asp-action="GardenCare" class="nav-link">Garden Care</a></li>
                     </ul>
-                    <ul class="navbar-nav ms-auto gap-lg-3">
+                  @*   <ul class="navbar-nav ms-auto gap-lg-3">
                         <li class="nav-item"><span class="nav-link text-danger fw-medium">Special Offers</span></li>
                         <li class="nav-item"><span class="nav-link text-muted">Bulk Orders</span></li>
-                    </ul>
+                    </ul> *@
                 </div>
             </div>
         </nav>

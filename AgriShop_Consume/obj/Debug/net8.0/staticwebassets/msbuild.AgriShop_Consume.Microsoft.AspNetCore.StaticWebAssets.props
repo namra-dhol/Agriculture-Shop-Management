@@ -1422,6 +1422,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\35982262-383f-4c73-a82b-c9fe3b374576.png'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\35d09936-a1b8-4bdc-85c6-711658b0ff20.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>AgriShop_Consume</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/AgriShop_Consume</BasePath>
+      <RelativePath>uploads/35d09936-a1b8-4bdc-85c6-711658b0ff20.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>wgunafrn6x</Fingerprint>
+      <Integrity>AFAp1Iqgrl4zaWehQxGAtU0NDlvqOIE+6+8IB/fjJJs=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\35d09936-a1b8-4bdc-85c6-711658b0ff20.png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\49837149-cb51-4f39-b76a-7848b2283c34.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>AgriShop_Consume</SourceId>
@@ -1457,6 +1475,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\4b093211-624b-4be4-b2c7-5e212ee9778c.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\4ee7b90d-d6cc-4eea-b035-f0b27a131754.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>AgriShop_Consume</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/AgriShop_Consume</BasePath>
+      <RelativePath>uploads/4ee7b90d-d6cc-4eea-b035-f0b27a131754.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>qrrnj4u1i4</Fingerprint>
+      <Integrity>qnD589i+a0TGS8GHwQoq8jHCRvQt8qvEoa1JSLOk9uU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\4ee7b90d-d6cc-4eea-b035-f0b27a131754.png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\5d5c5564-8742-41b2-b6f3-9ec379403e9b.jpg'))">
       <SourceType>Package</SourceType>
@@ -1548,6 +1584,42 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\cd6ff9c0-698d-450f-975f-c6038bd66f3e.png'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\d8c8e188-3b6f-454e-bf28-77435cd9c308.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>AgriShop_Consume</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/AgriShop_Consume</BasePath>
+      <RelativePath>uploads/d8c8e188-3b6f-454e-bf28-77435cd9c308.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>sq8xnjvnt1</Fingerprint>
+      <Integrity>hP0qQa1evTBb1oIBON4zvX2PCH21asx9tLXb8QZ9L50=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\d8c8e188-3b6f-454e-bf28-77435cd9c308.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\f854ed0e-2e3a-471c-8bb8-57da1ea49645.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>AgriShop_Consume</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/AgriShop_Consume</BasePath>
+      <RelativePath>uploads/f854ed0e-2e3a-471c-8bb8-57da1ea49645.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>1yp2ufo43g</Fingerprint>
+      <Integrity>JxZYcFSO5467/MCbEIRB4SY4JuOFticy+BsOjEAMt8k=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\f854ed0e-2e3a-471c-8bb8-57da1ea49645.png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\f8d3580a-620d-4491-8db1-a1752d38b64e.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>AgriShop_Consume</SourceId>
@@ -1565,6 +1637,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\f8d3580a-620d-4491-8db1-a1752d38b64e.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\ffd14643-85ce-4f46-ae6a-4e47f23bf912.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>AgriShop_Consume</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/AgriShop_Consume</BasePath>
+      <RelativePath>uploads/ffd14643-85ce-4f46-ae6a-4e47f23bf912.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>s3584e8pg5</Fingerprint>
+      <Integrity>2Aci+qJMTSBom7crV8rYGsfr9R3rT66ZF2ran/7BZ3A=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\ffd14643-85ce-4f46-ae6a-4e47f23bf912.png'))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

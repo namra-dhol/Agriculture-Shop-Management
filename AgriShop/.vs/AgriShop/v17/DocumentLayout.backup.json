@@ -3,84 +3,92 @@
   "WorkspaceRootPath": "D:\\Agriculture-Shop-Management\\AgriShop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\controllers\\productvarientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:controllers\\productvarientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\models\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:models\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\comments\\dashboardview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:comments\\dashboardview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\controllers\\contactformcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:controllers\\contactformcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\models\\contactform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:models\\contactform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\models\\agrishopcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:models\\agrishopcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\models\\emailconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:models\\emailconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\models\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:models\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\helpers\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:helpers\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\dtos\\authdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:dtos\\authdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\controllers\\querycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:controllers\\querycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\comments\\dashboardview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:comments\\dashboardview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\models\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:models\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\helpers\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:helpers\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\dtos\\querydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:dtos\\querydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\dtos\\authdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:dtos\\authdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\models\\agrishopcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:models\\agrishopcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\controllers\\productvarientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:controllers\\productvarientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\models\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:models\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\models\\contactform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:models\\contactform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\models\\emailconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:models\\emailconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\comments\\authcontrollercomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -89,10 +97,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\comments\\authdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:comments\\authdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -105,10 +109,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\controllers\\producttypecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:controllers\\producttypecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|solutionrelative:services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E70409C8-277C-4276-9D57-79328A247657}|AgriShop.csproj|d:\\agriculture-shop-management\\agrishop\\models\\productvariant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -162,59 +162,76 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 1,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "DashboardController.cs",
               "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\Controllers\\DashboardController.cs",
               "RelativeDocumentMoniker": "Controllers\\DashboardController.cs",
               "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\Controllers\\DashboardController.cs",
               "RelativeToolTip": "Controllers\\DashboardController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-05T06:15:49.045Z"
+              "WhenOpened": "2025-09-05T06:15:49.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DashBoardView.cs",
+              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\Comments\\DashBoardView.cs",
+              "RelativeDocumentMoniker": "Comments\\DashBoardView.cs",
+              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\Comments\\DashBoardView.cs",
+              "RelativeToolTip": "Comments\\DashBoardView.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T06:05:33.341Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "DashboardViewModel.cs",
-              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\Models\\DashboardViewModel.cs",
-              "RelativeDocumentMoniker": "Models\\DashboardViewModel.cs",
-              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\Models\\DashboardViewModel.cs",
-              "RelativeToolTip": "Models\\DashboardViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-05T06:05:52.071Z"
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-26T16:48:42.84Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ContactForm.cs",
-              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\Models\\ContactForm.cs",
-              "RelativeDocumentMoniker": "Models\\ContactForm.cs",
-              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\Models\\ContactForm.cs",
-              "RelativeToolTip": "Models\\ContactForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "QueryController.cs",
+              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\Controllers\\QueryController.cs",
+              "RelativeDocumentMoniker": "Controllers\\QueryController.cs",
+              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\Controllers\\QueryController.cs",
+              "RelativeToolTip": "Controllers\\QueryController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T16:51:30.438Z"
+              "WhenOpened": "2025-08-30T04:40:17.308Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AgriShopContext.cs",
-              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\Models\\AgriShopContext.cs",
-              "RelativeDocumentMoniker": "Models\\AgriShopContext.cs",
-              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\Models\\AgriShopContext.cs",
-              "RelativeToolTip": "Models\\AgriShopContext.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAYwJkAAABDAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAwF8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T16:47:25.862Z"
+              "WhenOpened": "2025-06-26T16:55:30.327Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
               "Title": "ContactFormController.cs",
               "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\Controllers\\ContactFormController.cs",
               "RelativeDocumentMoniker": "Controllers\\ContactFormController.cs",
@@ -226,128 +243,115 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
-              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T02:37:42.884Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T16:55:30.327Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ProductController.cs",
               "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
               "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\Controllers\\ProductController.cs",
               "RelativeToolTip": "Controllers\\ProductController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAO0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-29T07:09:47.875Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProductVarientController.cs",
-              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\Controllers\\ProductVarientController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProductVarientController.cs",
-              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\Controllers\\ProductVarientController.cs*",
-              "RelativeToolTip": "Controllers\\ProductVarientController.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-03T16:06:32.7Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "RegisterDTO.cs",
-              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\DTOs\\RegisterDTO.cs",
-              "RelativeDocumentMoniker": "DTOs\\RegisterDTO.cs",
-              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\DTOs\\RegisterDTO.cs",
-              "RelativeToolTip": "DTOs\\RegisterDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T04:31:46.262Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DashBoardView.cs",
-              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\Comments\\DashBoardView.cs",
-              "RelativeDocumentMoniker": "Comments\\DashBoardView.cs",
-              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\Comments\\DashBoardView.cs",
-              "RelativeToolTip": "Comments\\DashBoardView.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-05T06:05:33.341Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
-              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAQwA0AAAAGAAAAAAAAAA==",
+              "Title": "JwtService.cs",
+              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\Services\\JwtService.cs",
+              "RelativeDocumentMoniker": "Services\\JwtService.cs",
+              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\Services\\JwtService.cs",
+              "RelativeToolTip": "Services\\JwtService.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAAAC0AAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T16:52:21.556Z"
+              "WhenOpened": "2025-08-01T16:48:17.223Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "EmailConfig.cs",
-              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\Models\\EmailConfig.cs",
-              "RelativeDocumentMoniker": "Models\\EmailConfig.cs",
-              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\Models\\EmailConfig.cs",
-              "RelativeToolTip": "Models\\EmailConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "JwtSettings.cs",
+              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\Models\\JwtSettings.cs",
+              "RelativeDocumentMoniker": "Models\\JwtSettings.cs",
+              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\Models\\JwtSettings.cs",
+              "RelativeToolTip": "Models\\JwtSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T04:38:23.117Z"
+              "WhenOpened": "2025-08-01T02:51:00.916Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAA3wBYAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T16:51:42.711Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 9,
               "Title": "JwtSettings.cs",
               "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\Helpers\\JwtSettings.cs",
               "RelativeDocumentMoniker": "Helpers\\JwtSettings.cs",
               "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\Helpers\\JwtSettings.cs",
               "RelativeToolTip": "Helpers\\JwtSettings.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-01T16:25:40.579Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 10,
+              "Title": "QueryDTO.cs",
+              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\DTOs\\QueryDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\QueryDTO.cs",
+              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\DTOs\\QueryDTO.cs",
+              "RelativeToolTip": "DTOs\\QueryDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T04:18:10.83Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LoginDTO.cs",
+              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\DTOs\\LoginDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\LoginDTO.cs",
+              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\DTOs\\LoginDTO.cs",
+              "RelativeToolTip": "DTOs\\LoginDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-01T17:01:20.257Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAQwCsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T16:52:21.556Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "RegisterDTO.cs",
+              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\DTOs\\RegisterDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\RegisterDTO.cs",
+              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\DTOs\\RegisterDTO.cs",
+              "RelativeToolTip": "DTOs\\RegisterDTO.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAiwBIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T04:31:46.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-01T02:37:42.884Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "AuthDTOs.cs",
               "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\DTOs\\AuthDTOs.cs",
               "RelativeDocumentMoniker": "DTOs\\AuthDTOs.cs",
@@ -359,55 +363,79 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "LoginDTO.cs",
-              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\DTOs\\LoginDTO.cs",
-              "RelativeDocumentMoniker": "DTOs\\LoginDTO.cs",
-              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\DTOs\\LoginDTO.cs",
-              "RelativeToolTip": "DTOs\\LoginDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 16,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T17:01:20.257Z"
+              "WhenOpened": "2025-06-26T16:51:42.711Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "JwtSettings.cs",
-              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\Models\\JwtSettings.cs",
-              "RelativeDocumentMoniker": "Models\\JwtSettings.cs",
-              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\Models\\JwtSettings.cs",
-              "RelativeToolTip": "Models\\JwtSettings.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAACAAAAAAAAAA==",
+              "DocumentIndex": 17,
+              "Title": "AgriShopContext.cs",
+              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\Models\\AgriShopContext.cs",
+              "RelativeDocumentMoniker": "Models\\AgriShopContext.cs",
+              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\Models\\AgriShopContext.cs",
+              "RelativeToolTip": "Models\\AgriShopContext.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwJkAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T02:51:00.916Z"
+              "WhenOpened": "2025-06-26T16:47:25.862Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
-              "Title": "QueryController.cs",
-              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\Controllers\\QueryController.cs",
-              "RelativeDocumentMoniker": "Controllers\\QueryController.cs",
-              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\Controllers\\QueryController.cs",
-              "RelativeToolTip": "Controllers\\QueryController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "ProductVarientController.cs",
+              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\Controllers\\ProductVarientController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductVarientController.cs",
+              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\Controllers\\ProductVarientController.cs",
+              "RelativeToolTip": "Controllers\\ProductVarientController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T04:40:17.308Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "QueryDTO.cs",
-              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\DTOs\\QueryDTO.cs",
-              "RelativeDocumentMoniker": "DTOs\\QueryDTO.cs",
-              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\DTOs\\QueryDTO.cs",
-              "RelativeToolTip": "DTOs\\QueryDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T04:18:10.83Z"
+              "WhenOpened": "2025-07-03T16:06:32.7Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
+              "Title": "ContactForm.cs",
+              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\Models\\ContactForm.cs",
+              "RelativeDocumentMoniker": "Models\\ContactForm.cs",
+              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\Models\\ContactForm.cs",
+              "RelativeToolTip": "Models\\ContactForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T16:51:30.438Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "DashboardViewModel.cs",
+              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\Models\\DashboardViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\DashboardViewModel.cs",
+              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\Models\\DashboardViewModel.cs",
+              "RelativeToolTip": "Models\\DashboardViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T06:05:52.071Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "EmailConfig.cs",
+              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\Models\\EmailConfig.cs",
+              "RelativeDocumentMoniker": "Models\\EmailConfig.cs",
+              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\Models\\EmailConfig.cs",
+              "RelativeToolTip": "Models\\EmailConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T04:38:23.117Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "AuthControllerComment.cs",
               "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\Comments\\AuthControllerComment.cs",
               "RelativeDocumentMoniker": "Comments\\AuthControllerComment.cs",
@@ -419,7 +447,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "AuthDto.cs",
               "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\Comments\\AuthDto.cs",
               "RelativeDocumentMoniker": "Comments\\AuthDto.cs",
@@ -479,31 +507,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-26T16:48:42.84Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "JwtService.cs",
-              "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\Services\\JwtService.cs",
-              "RelativeDocumentMoniker": "Services\\JwtService.cs",
-              "ToolTip": "D:\\Agriculture-Shop-Management\\AgriShop\\Services\\JwtService.cs",
-              "RelativeToolTip": "Services\\JwtService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T16:48:17.223Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "TestController.cs",
               "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\Controllers\\TestController.cs",
               "RelativeDocumentMoniker": "Controllers\\TestController.cs",
@@ -539,7 +543,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "ProductTypeController.cs",
               "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\Controllers\\ProductTypeController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProductTypeController.cs",
@@ -551,7 +555,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "SupplierController.cs",
               "DocumentMoniker": "D:\\Agriculture-Shop-Management\\AgriShop\\Controllers\\SupplierController.cs",
               "RelativeDocumentMoniker": "Controllers\\SupplierController.cs",
@@ -620,6 +624,16 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-26T16:51:31.991Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1524,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }
